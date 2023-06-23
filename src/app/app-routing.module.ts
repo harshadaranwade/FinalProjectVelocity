@@ -9,7 +9,10 @@ const routes: Routes = [
   { path: 'orders', loadChildren: () => import('./FeaturedModule/orders/orders.module').then(m => m.OrdersModule) },
    { path: 'users', loadChildren: () => import('./FeaturedModule/users/users.module').then(m => m.UsersModule) },
     { path: 'newsletter', loadChildren: () => import('./FeaturedModule/newsletter/newsletter.module').then(m => m.NewsletterModule) },
-     { path: 'setting', loadChildren: () => import('./FeaturedModule/setting/setting.module').then(m => m.SettingModule) }];
+     { path: 'setting', loadChildren: () => import('./FeaturedModule/setting/setting.module').then(m => m.SettingModule) },
+{ path: 'subcategories', loadChildren: () => import('./FeaturedModule/subcategories/subcategories.module').then(m => m.SubcategoriesModule) },
+{path :'',redirectTo:"/login",pathMatch:'full'}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
