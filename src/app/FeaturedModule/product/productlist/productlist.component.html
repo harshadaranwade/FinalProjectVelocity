@@ -1,0 +1,82 @@
+<div class="container">
+
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+      <!-- Product Name -->
+      <ng-container matColumnDef="product">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Product </th>
+        <td mat-cell *matCellDef="let row">
+          <div class="product-details">
+            <img [src]="row.image" alt="Product Image" class="img me-2">
+            <span>{{ row.product }}</span>
+          </div>
+        </td>
+      </ng-container>
+
+
+      <!-- Created Data -->
+      <ng-container matColumnDef="created_at">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Created at </th>
+        <td mat-cell *matCellDef="let row"> {{row.created_at}}</td>
+      </ng-container>
+
+      <!-- Status -->
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+        <td mat-cell *matCellDef="let row">
+          <span class="badge" [ngClass]="{'text-bg-success': row.status === 'in stock', 'text-bg-warning': row.status === 'low stock', 'text-bg-danger': row.status === 'out of stock'}">
+            {{ row.status }}
+          </span>
+        </td>
+      </ng-container>
+
+      <!-- Rating -->
+      <ng-container matColumnDef="rating">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Rating </th>
+        <td mat-cell *matCellDef="let row"> <ngb-rating [max]="5" [(rate)]="row.starRating" [readonly]="false"></ngb-rating> </td>
+      </ng-container>
+
+      <!-- Price  -->
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+        <td mat-cell *matCellDef="let row"> &#8377;{{row.price}} </td>
+      </ng-container>
+
+      <!-- Featured  -->
+      <ng-container matColumnDef="featured">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Featured </th>
+        <td mat-cell *matCellDef="let row"> <mat-slide-toggle [(ngModel)]="row.isChecked"></mat-slide-toggle>
+        </td>
+      </ng-container>
+
+      <!-- Actions  -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
+        <td mat-cell *matCellDef="let row">
+          <mat-icon>visibility</mat-icon>
+          <mat-icon class="mx-2">edit</mat-icon>
+          <mat-icon>delete</mat-icon>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  </div>
+
+  </div>
+
+  <div class="spinner" *ngIf="isLoaded == true">
+    <mat-spinner  color="warn" ></mat-spinner>
+  </div>
+
+  <!-- <ngx-star-rating [(ngModel)]="selectedRating" [ariaValueMax]="5"></ngx-star-rating> -->
+
+
+
+
+
