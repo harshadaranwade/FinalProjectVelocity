@@ -11,9 +11,7 @@ const routes: Routes = [
     { path: 'newsletter', loadChildren: () => import('./FeaturedModule/newsletter/newsletter.module').then(m => m.NewsletterModule) },
      { path: 'setting', loadChildren: () => import('./FeaturedModule/setting/setting.module').then(m => m.SettingModule) },
 { path: 'subcategories', loadChildren: () => import('./FeaturedModule/subcategories/subcategories.module').then(m => m.SubcategoriesModule) },
-{ path: 'addcategories', loadChildren: () => import('./FeaturedModule/addcategories/addcategories.module').then(m => m.AddcategoriesModule) },
-{ path: 'addsubcategories', loadChildren: () => import('./FeaturedModule/addsubcategories/addsubcategories.module').then(m => m.AddsubcategoriesModule) },
-{ path: 'addproduct', loadChildren: () => import('./FeaturedModule/addproduct/addproduct.module').then(m => m.AddproductModule) },
+{path :'',redirectTo:"/login",pathMatch:'full'}
 ];
 
 @NgModule({
