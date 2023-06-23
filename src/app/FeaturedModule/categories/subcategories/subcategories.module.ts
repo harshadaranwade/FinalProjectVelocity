@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { SubcategoriesRoutingModule } from './subcategories-routing.module';
 import { SubcategoriesComponent } from './subcategories.component';
 
 
@@ -10,8 +8,7 @@ import { SubcategoriesComponent } from './subcategories.component';
     SubcategoriesComponent
   ],
   imports: [
-    CommonModule,
-    SubcategoriesRoutingModule
+    CommonModule
   ]
 })
 export class SubcategoriesModule { }
