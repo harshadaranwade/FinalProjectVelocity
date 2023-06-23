@@ -21,3 +21,23 @@ input,textarea,select{
 .shade{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+
+// ::ng-deep [_nghost-ivm-c77] {
+//   /* Your overrides here */
+// }
+#_nghost-ivm-c77 {
+  display: flex;
+  align-items: center;
+  height: 230px;
+  background: #f3f4f8;
+  background-image: url('../../../../assets/drop.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  color: #717386;
+  border: 1px solid rgb(196, 190, 190);
+  border-radius: 5px;
+  font-size: 16px;
+  overflow-x: auto;
+}

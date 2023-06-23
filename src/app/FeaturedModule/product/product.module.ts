@@ -9,6 +9,8 @@ import { MaterialModule } from 'src/app/MaterialModule/material/material.module'
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbRating } from '@ng-bootstrap/ng-bootstrap';
+import { NgxDropzoneModule } from 'ngx-dropzone';
+
 
 
 
@@ -24,7 +26,8 @@ import { NgbRating } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    NgbRating
+    NgbRating,
+    NgxDropzoneModule
   ]
 })
 export class ProductModule { }
