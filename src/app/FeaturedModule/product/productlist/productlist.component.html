@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-3">
 
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
@@ -54,9 +54,9 @@
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
         <td mat-cell *matCellDef="let row">
-          <mat-icon>visibility</mat-icon>
-          <mat-icon class="mx-2">edit</mat-icon>
-          <mat-icon>delete</mat-icon>
+          <mat-icon (click)="viewProduct(row)">visibility</mat-icon>
+          <mat-icon class="mx-2" (click)="editProduct(row)">edit</mat-icon>
+          <mat-icon (click)="deleteProduct(row)">delete</mat-icon>
         </td>
       </ng-container>
 
@@ -74,7 +74,7 @@
     <mat-spinner  color="warn" ></mat-spinner>
   </div>
 
-  <!-- <ngx-star-rating [(ngModel)]="selectedRating" [ariaValueMax]="5"></ngx-star-rating> -->
+
 
 
 
