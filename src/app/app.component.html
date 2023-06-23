@@ -7,23 +7,23 @@
 <div class="container-fluid" *ngIf="router.url!='/login'">
 
   <!-- -----------------------------ToolBar------------------------------------------- -->
-  <p>
-    <mat-toolbar color="accent">
+
+    <mat-toolbar color="accent" class="container-fluid">
       <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
         (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
       <span>My App</span>
       <span class="example-spacer"></span>
-      
+
       <button mat-icon-button class="logout" aria-label="Example icon-button with share icon" routerLink="/login">
         LogOut
       </button>
     </mat-toolbar>
-  </p>
+
 
   <!-- -------------------------Side Navbar------------------------ -->
-  <mat-drawer-container class="example-container" autosize>
+  <mat-drawer-container class="container-fluid" autosize style="height: 88vh; width: 100vw;">
     <mat-drawer #drawer class="example-sidenav" mode="side">
 
       <mat-list role="list">
@@ -34,8 +34,8 @@
         <mat-divider></mat-divider>
         <!-- ------------------Categories DropDown------------- -->
         <mat-expansion-panel [class.mat-elevation-z0]="true">
-          <mat-expansion-panel-header  >
-            <span class="nav" routerLink="/categories"><mat-icon
+          <mat-expansion-panel-header  routerLinkActive="active">
+            <span class="nav" routerLink="/categories" ><mat-icon
                 style="margin-right: 10px;">dashboard</mat-icon>Categories</span>
           </mat-expansion-panel-header>
           <mat-nav-list>
@@ -49,7 +49,7 @@
         </mat-expansion-panel>
         <!-- <mat-list-item role="listitem"><span class="nav"  routerLink="/categories" routerLinkActive="active"><mat-icon style="margin-right: 10px;">dashboard</mat-icon>Categories</span></mat-list-item> -->
         <mat-divider></mat-divider>
-        <mat-list-item role="listitem" class="border" routerLinkActive="active"><span class="nav" routerLink="/product" ><mat-icon
+        <mat-list-item role="listitem"  routerLinkActive="active"><span class="nav" routerLink="/product" ><mat-icon
               style="margin-right: 10px;">assured_workload</mat-icon>Product</span></mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item role="listitem" routerLinkActive="active"><span class="nav" routerLink="/orders" ><mat-icon
@@ -64,8 +64,8 @@
         <!-- <mat-list-item role="listitem"><span class="nav" routerLink="/setting" routerLinkActive="active"><mat-icon
               style="margin-right: 10px;">settings_suggest</mat-icon>Setting</span></mat-list-item> -->
         <mat-expansion-panel [class.mat-elevation-z0]="true">
-          <mat-expansion-panel-header>
-            <span class="nav" routerLink="/categories" routerLinkActive="active"><mat-icon
+          <mat-expansion-panel-header routerLinkActive="active">
+            <span class="nav" routerLink="/setting"><mat-icon
                 style="margin-right: 10px;">dashboard</mat-icon>Settings</span>
           </mat-expansion-panel-header>
           <mat-nav-list>
