@@ -18,7 +18,7 @@
       <!-- Created Data -->
       <ng-container matColumnDef="created_at">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Created at </th>
-        <td mat-cell *matCellDef="let row"> {{row.created_at}}</td>
+        <td mat-cell *matCellDef="let row"> {{row.created_at | date : 'dd MMMM yyyy'}}</td>
       </ng-container>
 
       <!-- Status -->

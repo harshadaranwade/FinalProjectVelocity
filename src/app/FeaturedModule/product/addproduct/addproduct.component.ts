@@ -61,7 +61,17 @@ export class AddproductComponent {
     // var formData = new FormData();
     // formData.append('productImage',this.productForm1.value.productImage);
 
-   let productDetails = {
+
+
+    if(this.selectedId == null){
+      this.onSubmit();
+    }else{
+      this.updateSelectedProduct();
+    }
+  }
+
+  onSubmit(){
+    let productDetails = {
       ...this.productForm1.value,
       ...this.productForm2.value,
       ...this.productForm3.value,
@@ -69,10 +79,10 @@ export class AddproductComponent {
     };
     // formData.append('productDetails',JSON.stringify(productDetails))
 
-    this.http.saveDataToServer('/products',productDetails).subscribe((res:any)=>{
+    this.http.saveDataToServer('products',productDetails).subscribe((res:any)=>{
       console.log(res);
+      this.router.navigate(['/product'])
     })
-    this.router.navigate(['/product'])
   }
 
 
@@ -99,36 +109,44 @@ export class AddproductComponent {
   // ------
 
   editProductDetails(){
-    const endPoint = "/products/" + this.selectedId
+    const endPoint = "products/" + this.selectedId
     this.http.getDataFromServer(endPoint).subscribe((response:any)=>{
       console.log(response)
-      this.productForm1.patchValue({
-        productName: response.productName,
-        description: response.description,
-        category: response.category,
-        brand: response.brand,
-        status: response.status,
-        sizes: response.sizes,
-        colors: response.colors,
-        tags: response.tags,
-        productImage: null // Assuming you don't want to display the existing image
-      });
+      this.productForm1.patchValue(response)
+      this.productForm2.patchValue(response)
+      this.productForm3.patchValue(response)
 
-      this.productForm2.patchValue({
-        productCode: response.productCode,
-        product_SKU: response.product_SKU,
-        gender: response.gender,
-        qunatity: response.qunatity
-      });
+      // this.productForm2.patchValue({
+      //   productCode: response.productCode,
+      //   product_SKU: response.product_SKU,
+      //   gender: response.gender,
+      //   qunatity: response.qunatity
+      // });
 
       this.productForm3.patchValue({
         regularPrice: response.regularPrice,
-        salePrice: response.salePrice
+        salePrice: response.salePrice,
+        feature : response.feature
       });
-
       this.isChecked = response.featured;
+
     });
   }
+
+  updateSelectedProduct(){
+    const endPoint = 'products/' + this.selectedId;
+    const productForm = {
+      ...this.productForm1.value,
+      ...this.productForm2.value,
+      ...this.productForm3.value,
+      featured : this.isChecked
+    }
+    this.http.updateDataToServer(endPoint,productForm).subscribe((response:any)=>{
+      console.log("edited data send ", response);
+      this.router.navigate(['/product'])
+    })
+  }
+
 
 }
 

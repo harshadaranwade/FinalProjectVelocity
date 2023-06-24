@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { SampleService } from '../../../sample.service';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-productlist',
@@ -20,6 +21,8 @@ export class ProductlistComponent implements OnInit {
 
   isLoaded:boolean = false;
 
+
+
   displayedColumns: any[] = [
     'productName',
     'created_at',
@@ -33,12 +36,17 @@ export class ProductlistComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!:MatSort;
 
-  constructor(private http:SampleService,private router:Router){}
+  constructor(private http:SampleService,private router:Router, private dialog:MatDialog){}
 
   ngOnInit() {
     this.isLoaded = true;
-    this.http.getDataFromServer('/products').subscribe((response:any)=>{
+    this.http.getDataFromServer('products').subscribe((response:any)=>{
       if(response && response.length > 0){
+
+        response.forEach((row:any)=>{
+          row.created_at = new Date();
+        })
+
         this.dataSource = new MatTableDataSource(response);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort
@@ -50,13 +58,13 @@ export class ProductlistComponent implements OnInit {
     })
   }
 
-  // editProduct(product:any){
-  //   console.log(product)
-  //   this.router.navigate(['/product/addProduct'])
+  editProduct(product:any){
+    console.log(product)
+    this.router.navigate(['/product/addProduct'])
 
-  // }
+  }
   deleteProduct(row:any,index:any){
-    const url = '/products/' + row.id;
+    const url = 'products/' + row.id;
     this.http.deleteDataFromServer(url).subscribe((response: any) => {
       const data = this.dataSource.data; // Get the underlying data array
       data.splice(index, 1); // Remove the item from the data array
@@ -70,6 +78,7 @@ export class ProductlistComponent implements OnInit {
     // this.router.navigate(['/product/addProduct'], { queryParams: { id: product.id } });
 
   }
+
 
 
 }
