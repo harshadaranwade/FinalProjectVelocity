@@ -58,15 +58,13 @@ export class AddproductComponent {
     })
   }
 
+
   createProduct(){
     console.log(this.productForm1.value)
     console.log(this.productForm2.value)
     console.log(this.productForm3.value)
     // var formData = new FormData();
     // formData.append('productImage',this.productForm1.value.productImage);
-
-
-
     if(this.selectedId == null){
       this.onSubmit();
     }else if(this.viewProduct && this.selectedId){
@@ -120,15 +118,7 @@ export class AddproductComponent {
       console.log(response)
       this.productForm1.patchValue(response)
       this.productForm2.patchValue(response)
-      this.productForm3.patchValue(response)
-
-      // this.productForm2.patchValue({
-      //   productCode: response.productCode,
-      //   product_SKU: response.product_SKU,
-      //   gender: response.gender,
-      //   qunatity: response.qunatity
-      // });
-
+      // this.productForm3.patchValue(response)
       this.productForm3.patchValue({
         regularPrice: response.regularPrice,
         salePrice: response.salePrice,
@@ -142,10 +132,11 @@ export class AddproductComponent {
   ViewProductDetails(){
     const endPoint = "products/" + this.selectedId
     this.http.getDataFromServer(endPoint).subscribe((response:any)=>{
+
       console.log(response)
       this.productForm1.patchValue(response)
       this.productForm2.patchValue(response)
-      this.productForm3.patchValue(response)
+      // this.productForm3.patchValue(response)
 
       // this.productForm2.patchValue({
       //   productCode: response.productCode,
@@ -160,6 +151,10 @@ export class AddproductComponent {
         feature : response.feature
       });
       this.isChecked = response.featured;
+
+    //   this.productForm1.disable();
+    // this.productForm2.disable();
+    // this.productForm3.disable();
 
     });
   }
