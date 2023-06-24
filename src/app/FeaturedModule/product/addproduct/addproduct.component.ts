@@ -22,6 +22,10 @@ export class AddproductComponent {
 
     this.selectedId = this.route.snapshot.queryParamMap.get('id');
     console.log("received Id ",this.selectedId )
+
+    if(this.selectedId){
+      this.editProductDetails();
+    }
   }
 
   createForm(){
@@ -94,11 +98,72 @@ export class AddproductComponent {
   }
   // ------
 
-// updateUserDetails(){
-//   let endPoint = "products/" + this.selectedId;
-//   this.http.updateDataToServer(endPoint,)
-// }
+  editProductDetails(){
+    const endPoint = "/products/" + this.selectedId
+    this.http.getDataFromServer(endPoint).subscribe((response:any)=>{
+      console.log(response)
+      this.productForm1.patchValue({
+        productName: response.productName,
+        description: response.description,
+        category: response.category,
+        brand: response.brand,
+        status: response.status,
+        sizes: response.sizes,
+        colors: response.colors,
+        tags: response.tags,
+        productImage: null // Assuming you don't want to display the existing image
+      });
 
+      this.productForm2.patchValue({
+        productCode: response.productCode,
+        product_SKU: response.product_SKU,
+        gender: response.gender,
+        qunatity: response.qunatity
+      });
 
+      this.productForm3.patchValue({
+        regularPrice: response.regularPrice,
+        salePrice: response.salePrice
+      });
+
+      this.isChecked = response.featured;
+    });
+  }
 
 }
+
+
+
+
+
+
+
+
+
+
+// this.productForm1.patchValue({
+//   productName: response.productName,
+//   description: response.description,
+//   category: response.category,
+//   brand: response.brand,
+//   status: response.status,
+//   sizes: response.sizes,
+//   colors: response.colors,
+//   tags: response.tags,
+//   productImage: null // Assuming you don't want to display the existing image
+// });
+
+// this.productForm2.patchValue({
+//   productCode: response.productCode,
+//   product_SKU: response.product_SKU,
+//   gender: response.gender,
+//   qunatity: response.qunatity
+// });
+
+// this.productForm3.patchValue({
+//   regularPrice: response.regularPrice,
+//   salePrice: response.salePrice
+// });
+
+// this.isChecked = response.featured;
+// });

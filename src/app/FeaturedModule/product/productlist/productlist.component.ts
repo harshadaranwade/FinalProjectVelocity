@@ -13,9 +13,10 @@ import { SampleService } from '../../../sample.service';
 export class ProductlistComponent implements OnInit {
 
 
-  dataSource!: MatTableDataSource<any>;
+  dataSource!:any;
   starRating:number = 5;
-  isChecked:boolean = false;
+
+  isChecked:boolean = true;
 
   isLoaded:boolean = false;
 
@@ -54,12 +55,20 @@ export class ProductlistComponent implements OnInit {
   //   this.router.navigate(['/product/addProduct'])
 
   // }
-  deleteProduct(product:any){
-    console.log(product)
+  deleteProduct(row:any,index:any){
+    const url = '/products/' + row.id;
+    this.http.deleteDataFromServer(url).subscribe((response: any) => {
+      const data = this.dataSource.data; // Get the underlying data array
+      data.splice(index, 1); // Remove the item from the data array
+      this.dataSource.data = data;
+      this.dataSource._updateChangeSubscription(response);
+    })
 
   }
   viewProduct(product:any){
     this.router.navigate(['/product/addProduct'])
+    // this.router.navigate(['/product/addProduct'], { queryParams: { id: product.id } });
+
   }
 
 

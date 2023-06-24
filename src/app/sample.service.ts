@@ -1,7 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { end } from '@popperjs/core';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -20,6 +19,11 @@ export class SampleService {
   saveDataToServer(endPoint:string,body:any){
     const url = this.baseUrl + endPoint;
     return this.http.post(url,body,{headers:this.httpHeaders});
+  }
+
+  deleteDataFromServer(endPoint:any){
+    const url = this.baseUrl + endPoint;
+    return this.http.delete(url,{headers:this.httpHeaders})
   }
 
   // editData(endPoint:string,id:any){
