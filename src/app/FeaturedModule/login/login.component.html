@@ -13,7 +13,8 @@
           name="user_pwd" formControlName="user_pwd">
         </div>
     
-        <button type="submit" class="btn btn-primary">LogIn</button>
+        <button type="submit" class="btn btn-primary" >LogIn</button>
+        <h6 *ngIf="showLogInError" >Enter Valid UserName And Password</h6>
       </form>
     </div>
   </div>

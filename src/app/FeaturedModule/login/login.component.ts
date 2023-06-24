@@ -9,6 +9,12 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   logIn!: FormGroup;
+  showLogInError:boolean=false;
+  userDetails={
+    userName:"angular@velocity.com",
+    userPassword:"Angular100"
+  }
+  
   constructor(private fb: FormBuilder,private router:Router) { }
 
   ngOnInit(): void {
@@ -22,9 +28,17 @@ export class LoginComponent implements OnInit {
     })
   }
   logInDashBoard() {
-
+    const Input=this.logIn.value;
     console.log(this.logIn.value);
-    this.router.navigate(['/dashBoard']);
+    if((Input.user_email==this.userDetails.userName)&&(Input.user_pwd==this.userDetails.userPassword)){
+      this.router.navigate(['/dashBoard']);
+    }
+    else{
+      this.showLogInError=true;
+      this.logIn.reset();
+    }
+  
 
   }
 }
+
