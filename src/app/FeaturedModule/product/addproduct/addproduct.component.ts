@@ -18,11 +18,14 @@ export class AddproductComponent {
   constructor(private fb:FormBuilder, private router:Router,private route:ActivatedRoute, private http:SampleService){}
   selectedId!:any;
   viewProduct!:any;
+  isEditable!:any;
   ngOnInit() {
     this.createForm();
     this.selectedId = this.route.snapshot.queryParamMap.get('id');
     console.log("received Id ",this.selectedId )
 
+    this.isEditable = this.route.snapshot.queryParamMap.get('temp');
+    console.log(this.isEditable)
     this.viewProduct = this.route.snapshot.queryParamMap.get('productName');
     console.log(this.viewProduct)
     if(this.selectedId){
@@ -136,14 +139,6 @@ export class AddproductComponent {
       console.log(response)
       this.productForm1.patchValue(response)
       this.productForm2.patchValue(response)
-      // this.productForm3.patchValue(response)
-
-      // this.productForm2.patchValue({
-      //   productCode: response.productCode,
-      //   product_SKU: response.product_SKU,
-      //   gender: response.gender,
-      //   qunatity: response.qunatity
-      // });
 
       this.productForm3.patchValue({
         regularPrice: response.regularPrice,
