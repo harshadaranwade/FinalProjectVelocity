@@ -18,7 +18,25 @@
       "salePrice": "12000",
       "featured": true,
       "id": 1
+    },
+    {
+      "productName": "HP Pavillion",
+      "description": "Laptop",
+      "category": "Electronics",
+      "brand": "HP",
+      "status": "In stock",
+      "sizes": "15.6",
+      "colors": "red",
+      "tags": "gadget",
+      "productImage": null,
+      "productCode": "12-Esb",
+      "product_SKU": "123",
+      "gender": "male",
+      "qunatity": "2",
+      "regularPrice": "20000",
+      "salePrice": "12000",
+      "featured": true,
+      "id": 2
     }
-
   ]
 }
