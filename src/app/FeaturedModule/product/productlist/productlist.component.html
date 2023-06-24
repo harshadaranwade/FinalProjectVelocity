@@ -54,9 +54,11 @@
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
         <td mat-cell *matCellDef="let row; let i = index">
-          <mat-icon (click)="viewProduct(row)">visibility</mat-icon>
+          <mat-icon [routerLink]="['addproduct/']" [queryParams]="{'productName' : row.productName,'id' : row.id}">visibility</mat-icon>
           <mat-icon class="mx-2" [routerLink]="['addproduct/']" [queryParams]="{'id' : row.id}">edit</mat-icon>
           <mat-icon (click)="deleteProduct(row,i)">delete</mat-icon>
+          <!-- <button mat-raised-button (click)="deleteProduct(row,i,'0ms','0ms')">Delete</button> -->
+
         </td>
       </ng-container>
 

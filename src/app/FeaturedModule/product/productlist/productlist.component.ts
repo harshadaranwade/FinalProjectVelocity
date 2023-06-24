@@ -4,7 +4,8 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { SampleService } from '../../../sample.service';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { DeletedialogComponent } from '../deletedialog/deletedialog.component';
 
 @Component({
   selector: 'app-productlist',
@@ -58,27 +59,31 @@ export class ProductlistComponent implements OnInit {
     })
   }
 
-  editProduct(product:any){
-    console.log(product)
-    this.router.navigate(['/product/addProduct'])
+  // editProduct(product:any){
+  //   console.log(product)
+  //   // this.router.navigate(['/product/addProduct'])
 
-  }
-  deleteProduct(row:any,index:any){
-    const url = 'products/' + row.id;
-    this.http.deleteDataFromServer(url).subscribe((response: any) => {
-      const data = this.dataSource.data; // Get the underlying data array
-      data.splice(index, 1); // Remove the item from the data array
-      this.dataSource.data = data;
-      this.dataSource._updateChangeSubscription(response);
+  // }
+  deleteProduct(rowData:any,index:any,enterAnimationDuration?: string, exitAnimationDuration?: string){
+    let config = new MatDialogConfig();
+    config.width = "700px";
+    const dialogRef = this.dialog.open(DeletedialogComponent);
+    dialogRef.afterClosed().subscribe((result:boolean)=>{
+      if(result === true){
+
+        const url = 'products/' + rowData.id;
+        this.http.deleteDataFromServer(url).subscribe((response: any) => {
+          const data = this.dataSource.data;
+          data.splice(index, 1);
+          this.dataSource.data = data;
+          this.dataSource._updateChangeSubscription(response);
+        })
+      }
+
     })
-
   }
   viewProduct(product:any){
-    this.router.navigate(['/product/addProduct'])
-    // this.router.navigate(['/product/addProduct'], { queryParams: { id: product.id } });
-
+    console.log(product);
   }
-
-
 
 }

@@ -17,14 +17,18 @@ export class AddproductComponent {
 
   constructor(private fb:FormBuilder, private router:Router,private route:ActivatedRoute, private http:SampleService){}
   selectedId!:any;
+  viewProduct!:any;
   ngOnInit() {
     this.createForm();
-
     this.selectedId = this.route.snapshot.queryParamMap.get('id');
     console.log("received Id ",this.selectedId )
 
+    this.viewProduct = this.route.snapshot.queryParamMap.get('productName');
+    console.log(this.viewProduct)
     if(this.selectedId){
       this.editProductDetails();
+    }else{
+      this.ViewProductDetails();
     }
   }
 
@@ -65,6 +69,8 @@ export class AddproductComponent {
 
     if(this.selectedId == null){
       this.onSubmit();
+    }else if(this.viewProduct && this.selectedId){
+      this.ViewProductDetails();
     }else{
       this.updateSelectedProduct();
     }
@@ -109,6 +115,31 @@ export class AddproductComponent {
   // ------
 
   editProductDetails(){
+    const endPoint = "products/" + this.selectedId
+    this.http.getDataFromServer(endPoint).subscribe((response:any)=>{
+      console.log(response)
+      this.productForm1.patchValue(response)
+      this.productForm2.patchValue(response)
+      this.productForm3.patchValue(response)
+
+      // this.productForm2.patchValue({
+      //   productCode: response.productCode,
+      //   product_SKU: response.product_SKU,
+      //   gender: response.gender,
+      //   qunatity: response.qunatity
+      // });
+
+      this.productForm3.patchValue({
+        regularPrice: response.regularPrice,
+        salePrice: response.salePrice,
+        feature : response.feature
+      });
+      this.isChecked = response.featured;
+
+    });
+  }
+
+  ViewProductDetails(){
     const endPoint = "products/" + this.selectedId
     this.http.getDataFromServer(endPoint).subscribe((response:any)=>{
       console.log(response)

@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbRating } from '@ng-bootstrap/ng-bootstrap';
 import { NgxDropzoneModule } from 'ngx-dropzone';
+import { DeletedialogComponent } from './deletedialog/deletedialog.component';
 
 
 
@@ -18,7 +19,8 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
   declarations: [
     ProductComponent,
     AddproductComponent,
-    ProductlistComponent
+    ProductlistComponent,
+    DeletedialogComponent
   ],
   imports: [
     CommonModule,
