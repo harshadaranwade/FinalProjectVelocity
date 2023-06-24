@@ -57,11 +57,11 @@
           </div>
 
           <!-- drag and drop  -->
-          <div class="mt-3 custom-border" >
-            <ngx-dropzone (change)="onSelect($event)" id="_nghost-ivm-c77">
+          <div class="mt-3 custom-border" formControlName="productImage">
+            <ngx-dropzone (change)="onSelect($event)" id="_nghost-ivm-c77" >
               <!-- <ngx-dropzone-label >Drop Images!</ngx-dropzone-label > -->
-              <ngx-dropzone-image-preview  ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f">
-                <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+              <ngx-dropzone-image-preview  ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" >
+                <!-- <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label> -->
               </ngx-dropzone-image-preview>
             </ngx-dropzone>
           </div>
@@ -118,7 +118,7 @@
               placeholder="&#8377; 0.00">
           </div>
           <div>
-            <mat-slide-toggle>Featured Product</mat-slide-toggle>
+            <mat-slide-toggle (click)="buttonState($event)">Featured Product</mat-slide-toggle>
           </div>
 
           <button mat-raised-button color="accent" type="submit" style="max-width: 100%; width: 300px;"

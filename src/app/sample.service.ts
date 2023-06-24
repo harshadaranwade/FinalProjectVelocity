@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { end } from '@popperjs/core';
 
@@ -21,4 +21,14 @@ export class SampleService {
     const url = this.baseUrl + endPoint;
     return this.http.post(url,body,{headers:this.httpHeaders});
   }
+
+  // editData(endPoint:string,id:any){
+  //   const url = this.baseUrl + endPoint;
+  //   let queryParam = new HttpParams().set('user_id',id)
+  //   return this.http.get(url,{params:queryParam})
+  // }
+  // updateDataToServer(endPoint:string,body:any){
+  //   const url = this.baseUrl + endPoint;
+  //   return this.http.put(url,body,{headers:this.httpHeaders});
+  // }
 }

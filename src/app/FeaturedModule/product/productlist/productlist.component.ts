@@ -19,6 +19,16 @@ export class ProductlistComponent implements OnInit {
 
   isLoaded:boolean = false;
 
+  displayedColumns: any[] = [
+    'productName',
+    'created_at',
+    'status',
+    'rating',
+    'regularPrice',
+    'featured',
+    'actions',
+  ];
+
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!:MatSort;
 
@@ -39,25 +49,18 @@ export class ProductlistComponent implements OnInit {
     })
   }
 
-  editProduct(product:any){
-    console.log(product)
-    this.router.navigate(['/product/addProduct'])
+  // editProduct(product:any){
+  //   console.log(product)
+  //   this.router.navigate(['/product/addProduct'])
 
-  }
+  // }
   deleteProduct(product:any){
+    console.log(product)
 
   }
   viewProduct(product:any){
     this.router.navigate(['/product/addProduct'])
   }
 
-  displayedColumns: any[] = [
-    'product',
-    'created_at',
-    'status',
-    'rating',
-    'price',
-    'featured',
-    'actions',
-  ];
+
 }

@@ -4,12 +4,12 @@
     <table mat-table [dataSource]="dataSource" matSort>
 
       <!-- Product Name -->
-      <ng-container matColumnDef="product">
+      <ng-container matColumnDef="productName">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Product </th>
         <td mat-cell *matCellDef="let row">
           <div class="product-details">
             <img [src]="row.image" alt="Product Image" class="img me-2">
-            <span>{{ row.product }}</span>
+            <span>{{ row.productName }}</span>
           </div>
         </td>
       </ng-container>
@@ -38,9 +38,9 @@
       </ng-container>
 
       <!-- Price  -->
-      <ng-container matColumnDef="price">
+      <ng-container matColumnDef="regularPrice">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
-        <td mat-cell *matCellDef="let row"> &#8377;{{row.price}} </td>
+        <td mat-cell *matCellDef="let row"> &#8377;{{row.regularPrice}} </td>
       </ng-container>
 
       <!-- Featured  -->
@@ -55,7 +55,7 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
         <td mat-cell *matCellDef="let row">
           <mat-icon (click)="viewProduct(row)">visibility</mat-icon>
-          <mat-icon class="mx-2" (click)="editProduct(row)">edit</mat-icon>
+          <mat-icon class="mx-2" [routerLink]="['addProduct/']" [queryParams]="{'id' : row.id}">edit</mat-icon>
           <mat-icon (click)="deleteProduct(row)">delete</mat-icon>
         </td>
       </ng-container>
