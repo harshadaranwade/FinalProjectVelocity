@@ -45,7 +45,7 @@ export class AddproductComponent {
       "sizes" : ['',Validators.required],
       "colors" : ['',Validators.required],
       "tags" : ['',Validators.required],
-      "productImage" : [null]
+      "productImage" : ['']
     })
 
     this.productForm2 = this.fb.group({
