@@ -17,7 +17,7 @@
   }
   
   .example-sidenav-content {
-    width: 300px;
+    width: 1200px;
     display: flex;
     height: 100%;
    
@@ -44,11 +44,11 @@
     margin-right: 80px;
   }
  
-  mat-list-item{
-    //width:300px;
-    background-color: yellow;
+  // mat-list-item{
+  //   //width:300px;
+  //   background-color: yellow;
    
-  }
+  // }
   .active{
     border-right:2px solid red;
     
