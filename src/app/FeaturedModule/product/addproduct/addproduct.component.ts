@@ -87,7 +87,11 @@ export class AddproductComponent {
     // formData.append('productDetails',JSON.stringify(productDetails))
 
     this.http.saveDataToServer('products',productDetails).subscribe((res:any)=>{
-      console.log(res);
+      // console.log(res);
+      // res.forEach((item: any) => {
+      //   item.created_at = item // Convert the created_at string to a Date object
+      //   console.log()
+      // });
       this.router.navigate(['/product'])
     })
   }
@@ -172,37 +176,3 @@ export class AddproductComponent {
 }
 
 
-
-
-
-
-
-
-
-
-// this.productForm1.patchValue({
-//   productName: response.productName,
-//   description: response.description,
-//   category: response.category,
-//   brand: response.brand,
-//   status: response.status,
-//   sizes: response.sizes,
-//   colors: response.colors,
-//   tags: response.tags,
-//   productImage: null // Assuming you don't want to display the existing image
-// });
-
-// this.productForm2.patchValue({
-//   productCode: response.productCode,
-//   product_SKU: response.product_SKU,
-//   gender: response.gender,
-//   qunatity: response.qunatity
-// });
-
-// this.productForm3.patchValue({
-//   regularPrice: response.regularPrice,
-//   salePrice: response.salePrice
-// });
-
-// this.isChecked = response.featured;
-// });
