@@ -29,5 +29,15 @@
       "price" : "15000"
     }
 
-  ]
+  ],
+
+"userList" : [
+  { "User": "Jhon", "Email": "jhon@gmail.com", "Phone": 8765435678, "Status": "Active", "Joined": "10/06/2023" },
+  { "User": "roy", "Email": "roy@gmail.com", "Phone": 9085435678, "Status": "Active", "Joined": "10/06/2023" },
+  { "User": "Jay", "Email": "jay@gmail.com", "Phone": 8765435654, "Status": "Active", "Joined": "6/06/2023" },
+  { "User": "Ram", "Email": "ram@gmail.com", "Phone": 8765435678, "Status": "Active", "Joined": "10/06/2023" },
+  { "User": "shyam", "Email": "shyam@gmail.com", "Phone": 8765678876, "Status": "Active", "Joined": "10/06/2023" }
+
+]
+
 }

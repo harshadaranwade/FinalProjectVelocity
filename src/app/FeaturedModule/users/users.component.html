@@ -1,1 +1,50 @@
-<h3>Users Component</h3>
+<div class="container mt-2">
+    <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="userlist" class="mat-elevation-z8" [width]="100">
+    
+    
+    <ng-container matColumnDef="User">
+    <th class="bg-danger" mat-header-cell *matHeaderCellDef > User </th>
+    <td mat-cell *matCellDef="let element"> {{element.User}} </td>
+    </ng-container>
+    
+    
+    <ng-container matColumnDef="Email">
+    <th  class="bg-danger" mat-header-cell *matHeaderCellDef  > Email </th>
+    <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
+    </ng-container>
+    
+    
+    <ng-container matColumnDef="Phone">
+    <th  class="bg-danger" mat-header-cell *matHeaderCellDef> Phone </th>
+    <td mat-cell *matCellDef="let element"> {{element.Phone}} </td>
+    </ng-container>
+    
+    
+    <ng-container matColumnDef="Status">
+    <th  class="bg-danger" mat-header-cell *matHeaderCellDef> Status </th>
+    <td mat-cell *matCellDef="let element"> <span class="bg-$green-600">{{element.Status}}</span> </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="Joined">
+    <th  class="bg-danger"mat-header-cell *matHeaderCellDef> Joined </th>
+    <td mat-cell *matCellDef="let element"> {{element.Joined}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="Action">
+    <th class="bg-danger"mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let element"> <mat-icon>visibility</mat-icon> </td>
+    </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+    </table>
+
+    <!-- <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator> -->
+    </div>
+    </div>

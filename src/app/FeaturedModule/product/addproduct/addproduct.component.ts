@@ -57,4 +57,7 @@ export class AddproductComponent {
     this.router.navigate(['/product'])
   }
 
+  updateDataToServer(){
+
+  }
 }

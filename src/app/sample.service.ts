@@ -15,4 +15,7 @@ export class SampleService {
     const url = this.baseUrl + endPoint;
     return this.http.get(url,{headers:this.httpHeaders});
   }
+ saveDataToServer(endPoint:string){
+console.log('Hi');
+ }
 }

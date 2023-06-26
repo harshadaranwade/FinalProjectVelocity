@@ -16,21 +16,20 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatExpansionModule } from '@angular/material/expansion';
 
 let materialModules=[
-  MatButtonModule,
-  MatSidenavModule,
-  MatListModule,
-  MatTableModule,
-  MatSlideToggleModule,
-  MatIconModule,
-  MatSortModule,
-  MatPaginatorModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatFormFieldModule,
-  MatSelectModule,
-  MatToolbarModule,
-  MatExpansionModule,
-
+MatToolbarModule,
+MatIconModule,
+MatButtonModule,
+MatSidenavModule,
+MatListModule,
+MatExpansionModule,
+MatTableModule,
+MatSlideToggleModule,
+MatSortModule,
+MatPaginatorModule,
+MatProgressSpinnerModule,
+MatRadioModule,
+MatFormFieldModule,
+MatSelectModule
 
 ]
 
