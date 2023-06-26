@@ -5,24 +5,22 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+
   p{
     margin: 0 -10px;
   }
   .example-container {
-    
-  
     width: 1450px;
     height: 700px;
     border: 1px solid rgba(0, 0, 0, 0.5);
   }
-  
+
   .example-sidenav-content {
-    width: 300px;
     display: flex;
-    height: 100%;
-   
+    width: 100%;
+    background-color: aliceblue;
   }
-  
+
   .example-sidenav {
     padding: 10px;
     background-color: aliceblue;
@@ -33,25 +31,23 @@
   }
   .nav{
     width: 250px;
-    height: 20px;
+    height: 22px;
     font-size: 14px;
-  }
-  .fontsize{
-    font-size: 14px;
-  }
-  
-  .logout{
-    margin-right: 80px;
+     color: rgb(232, 69, 121);
   }
  
+
   mat-list-item{
-    //width:300px;
-    background-color: yellow;
-   
+    background-color: aliceblue;
   }
   .active{
-    border-right:2px solid red;
-    
-    //background-color: aqua;
-   // padding: 10px;
+    border-right:4px solid rgb(232, 69, 121);
+   // color: rgb(232, 69, 121);
+  }
+
+  .mat-drawer-transition .mat-drawer-content{
+    width: 50vw;
+  }
+  .mat-drawer-side{
+    width:220px;
   }
