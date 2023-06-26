@@ -43,6 +43,20 @@
       "contactnum": "1111222233",
       "password": "Harsh123",
       "id": 2
+    },
+    {
+      "username": "Velocity2",
+      "gender": "Male",
+      "contactnum": "2323232323",
+      "password": "Velocity222",
+      "id": 3
+    },
+    {
+      "username": "Harshali",
+      "gender": "Female",
+      "contactnum": "2323232323",
+      "password": "Harshali123",
+      "id": 4
     }
   ]
 }
