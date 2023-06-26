@@ -22,6 +22,7 @@ import { AppProjectInterceptor } from './CoreModules/InterCeptors/app-project.in
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
     MaterialModule,
