@@ -1,0 +1,48 @@
+{
+  "newsSource": [
+    {
+      "news_head": "News",
+      "article": "Csfcdfcd",
+      "date": "2023-06-26",
+      "id": 27
+    },
+    {
+      "news_head": "hvfcv fdvgs",
+      "article": "gnghjgh",
+      "date": "2023-06-26",
+      "id": 28
+    }
+  ],
+  "Subs": [
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 4
+    },
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 5
+    },
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 6
+    },
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 7
+    }
+  ]
+}
