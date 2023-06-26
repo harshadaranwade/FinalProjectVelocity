@@ -33,7 +33,14 @@ export class SampleService {
   }
 
   updateDataToServer(endPoint:string,body:any){
+    const currentDate = {
+      'created_at' : new Date()
+    }
+    const payload = {
+      ...currentDate,
+      ...body
+    }
     const url = this.baseUrl + endPoint;
-    return this.http.put(url,body,{headers:this.httpHeaders});
+    return this.http.put(url,payload,{headers:this.httpHeaders});
   }
 }

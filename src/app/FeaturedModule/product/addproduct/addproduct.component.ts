@@ -30,8 +30,13 @@ export class AddproductComponent {
     console.log(this.viewProduct)
     if(this.selectedId){
       this.editProductDetails();
-    }else{
+    }else if(this.isEditable){
       this.ViewProductDetails();
+      this.productForm2.get('gender')?.disable();
+      this.productForm1.get('category')?.disable();
+      this.productForm1.get('status')?.disable();
+    }else{
+      this.onSubmit()
     }
   }
 
@@ -45,7 +50,7 @@ export class AddproductComponent {
       "sizes" : ['',Validators.required],
       "colors" : ['',Validators.required],
       "tags" : ['',Validators.required],
-      "productImage" : ['']
+      "productImage" : []
     })
 
     this.productForm2 = this.fb.group({
@@ -70,6 +75,7 @@ export class AddproductComponent {
       this.onSubmit();
     }else if(this.viewProduct && this.selectedId){
       this.ViewProductDetails();
+
     }else{
       this.updateSelectedProduct();
     }
@@ -161,6 +167,7 @@ onSelect(event: any) {
         salePrice: response.salePrice,
         feature : response.feature
       });
+
       this.isChecked = response.featured;
 
     });

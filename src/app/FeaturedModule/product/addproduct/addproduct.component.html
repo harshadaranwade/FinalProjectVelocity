@@ -17,7 +17,7 @@
           <div class="row mb-3">
             <div class="col-md-6">
               <label for="category" class="form-label">Category</label>
-              <select class="form-control height" id="category" formControlName="category" [disabled]="isEditable">
+              <select class="form-control height" id="category" formControlName="category">
                 <option value="">Select Category </option>
                 <option *ngFor="let category of categories" [value]="category">{{category}}</option>
               </select>
@@ -32,7 +32,7 @@
           <div class="row mb-3">
             <div class="col-md-6">
               <label for="status" class="form-label">Status</label>
-              <select class="form-control height" id="status" formControlName="status" [disabled]="isEditable">
+              <select class="form-control height" id="status" formControlName="status">
                 <option value="">Select Status </option>
                 <option *ngFor="let stat of status" [value]="stat">{{stat}}</option>
               </select>
@@ -59,10 +59,7 @@
           <!-- drag and drop  -->
           <div class="mt-3 custom-border" formControlName="productImage">
             <div class="image-upload">
-              <input type="file" (change)="onSelect($event)" accept=".jpg, .jpeg, .png" id="custom" formControlName="productImage">
-
-              <!-- <input class="addPhotos-inputFile form-control" type="file"  onclick="this.value = null" accept=".jpg, .jpeg, .png" (input)="uploadFileEvent($event)" /> -->
-
+              <input type="file" (change)="onSelect($event)" accept="image/*" id="custom" formControlName="productImage">
                 <label for="custom" class="drag-area">
                   <img *ngIf="ImageBase64String" [src]="ImageBase64String" alt="Selected Image" class="align-img">
                   <div class="upload-icon">
@@ -95,7 +92,7 @@
 
           <!-- gender  -->
           <label for="gender" class="form-label ms-2">Gender</label><br>
-          <mat-radio-group aria-label="Select an option" class="mb-3" formControlName="gender" [disabled]="isEditable">
+          <mat-radio-group aria-label="Select an option" class="mb-3" formControlName="gender" >
             <mat-radio-button value="male">Male</mat-radio-button>
             <mat-radio-button value="female">Female</mat-radio-button>
             <mat-radio-button value="kids">Kids</mat-radio-button>
