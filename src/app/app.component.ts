@@ -11,4 +11,9 @@ export class AppComponent {
   constructor( public router:Router){
 
   }
+  logOut(){
+    // sessionStorage.setItem("isLoggedIn","true");
+    sessionStorage.setItem("isLoggedIn","False");
+    this.router.navigate(['/login']);
+  }
 }
