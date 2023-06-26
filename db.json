@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "posts": [
     {
       "id": 1,
@@ -16,4 +17,15 @@
   "profile": {
     "name": "typicode"
   }
+=======
+  "credentials": [
+    {
+      "username": "dsdsd",
+      "gender": "Female",
+      "contactnum": "dsdsadas",
+      "password": "sdsds",
+      "id": 1
+    }
+  ]
+>>>>>>> 6d74591049ea39dfbe9d69c9f7a0b04a2e9aa0da
 }

@@ -99,24 +99,22 @@
       "salePrice": "12000",
       "featured": true,
       "id": 2
+    }
+  ],
+  "credentials": [
+    {
+      "username": "velocity1@gmail.com",
+      "gender": "Male",
+      "contactnum": "23456",
+      "password": "dsfsfsf",
+      "id": 1
     },
     {
-      "productName": "",
-      "description": "",
-      "category": "",
-      "brand": "",
-      "status": "",
-      "sizes": "",
-      "colors": "",
-      "tags": "",
-      "productImage": null,
-      "productCode": "",
-      "product_SKU": "",
-      "gender": "",
-      "qunatity": "",
-      "regularPrice": "",
-      "salePrice": "",
-      "id": 3
+      "username": "Harshada",
+      "gender": "Female",
+      "contactnum": "1111222233",
+      "password": "Harsh123",
+      "id": 2
     }
   ]
 }
