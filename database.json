@@ -99,6 +99,24 @@
       "salePrice": "12000",
       "featured": true,
       "id": 2
+    },
+    {
+      "productName": "",
+      "description": "",
+      "category": "",
+      "brand": "",
+      "status": "",
+      "sizes": "",
+      "colors": "",
+      "tags": "",
+      "productImage": null,
+      "productCode": "",
+      "product_SKU": "",
+      "gender": "",
+      "qunatity": "",
+      "regularPrice": "",
+      "salePrice": "",
+      "id": 3
     }
   ]
 }
