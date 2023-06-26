@@ -66,8 +66,6 @@ export class AddproductComponent {
     console.log(this.productForm1.value)
     console.log(this.productForm2.value)
     console.log(this.productForm3.value)
-    // var formData = new FormData();
-    // formData.append('productImage',this.productForm1.value.productImage);
     if(this.selectedId == null){
       this.onSubmit();
     }else if(this.viewProduct && this.selectedId){
@@ -84,17 +82,43 @@ export class AddproductComponent {
       ...this.productForm3.value,
       featured : this.isChecked
     };
-    // formData.append('productDetails',JSON.stringify(productDetails))
 
     this.http.saveDataToServer('products',productDetails).subscribe((res:any)=>{
-      // console.log(res);
-      // res.forEach((item: any) => {
-      //   item.created_at = item // Convert the created_at string to a Date object
-      //   console.log()
-      // });
       this.router.navigate(['/product'])
     })
   }
+
+
+
+
+ImageBase64String: any = '';
+
+onSelect(event: any) {
+  if (event.target.files.length === 0) {
+    alert("No file selected!");
+    return;
+  }
+
+  const file: File = event.target.files[0];
+  const reader = new FileReader();
+
+  reader.onload = (onLoadEvent: any) => {
+    const binaryString: string = onLoadEvent.target.result;
+    this.ImageBase64String = binaryString;
+    console.log('ImageBase64String', this.ImageBase64String);
+
+    // Send the binary string to the server using an HTTP request
+    this.http.saveDataToServer('products', this.ImageBase64String).subscribe((res: any) => {
+      console.log(res);
+    });
+  };
+
+  reader.onerror = (onErrorEvent: any) => {
+    reader.abort();
+  };
+
+  reader.readAsDataURL(file);
+}
 
 
 
@@ -104,20 +128,8 @@ export class AddproductComponent {
     console.log(this.isChecked)
   }
 
-  // dropzone
-  files: File[] = [];
-  onSelect(event:any) {
-    console.log(event);
-    this.files.push(...event.addedFiles);
-    const file : File = event.addedFiles[0];
-    this.productForm1.patchValue({productImage : file})
-  }
 
-  onRemove(event:any) {
-    console.log(event);
-    this.files.splice(this.files.indexOf(event), 1);
-  }
-  // ------
+
 
   editProductDetails(){
     const endPoint = "products/" + this.selectedId
@@ -151,10 +163,6 @@ export class AddproductComponent {
       });
       this.isChecked = response.featured;
 
-    //   this.productForm1.disable();
-    // this.productForm2.disable();
-    // this.productForm3.disable();
-
     });
   }
 
@@ -176,3 +184,103 @@ export class AddproductComponent {
 }
 
 
+// -----------------------
+
+// files: File[] = [];
+// selectedImage: string | ArrayBuffer | null = null;
+
+// onSelect(event: any) {
+//   this.files = Array.from(event.target.files);
+
+//   if (this.files.length > 0) {
+//     const reader = new FileReader();
+
+//     reader.onload = (e: any) => {
+//       const base64Image = e.target.result;
+//       this.selectedImage = base64Image;
+//       this.uploadImages(base64Image);
+//     };
+
+//     reader.readAsDataURL(this.files[0]);
+//   } else {
+//     this.selectedImage = null;
+//   }
+// }
+
+// uploadImages(base64Image: string) {
+//   if (this.files.length === 0) {
+//     alert("No files selected");
+//     return;
+//   }
+
+//   const jsonData = {
+//     id: 1,
+//     name: "Product 1",
+//     image: base64Image,
+//   };
+//   this.http.saveDataToServer('products',jsonData).subscribe((res:any)=>{
+//     console.log(res)
+//   })
+
+// }
+// ==========================
+
+
+// image upload
+// // -----------------------------
+// //   files:File[] = [];
+// //   selectedImage:string | ArrayBuffer | null = null;
+
+// //   onSelect(event:any){
+// // this.files = Array.from(event.target.files)
+
+// // if(this.files.length > 0){
+// //   const reader = new FileReader();
+
+// //   reader.onload = (e:any)=>{
+// //     this.selectedImage = e.target.result;
+
+// //     this.uploadImages();
+// //   };
+// //   reader.readAsDataURL(this.files[0]);
+// // }else{
+// //   this.selectedImage = null;
+// // }
+// //   }
+// //   uploadImages(){
+// //     if(this.files.length === 0){
+// //       alert("No files Selected")
+// //       return;
+// //     }
+// //     const formData = new FormData();
+// //     this.files.forEach((file:File)=>{
+// //       formData.append('images',file);
+// //       console.log(file)
+// //     })
+// //   }
+// ========================================
+// ImageBase64String:any = '';
+
+// onSelect(event:any){
+// if(event.target.files.length === 0){
+//   alert("No file selected!")
+//   return;
+// }
+// const file: File = event.target.files[0];
+// const reader = new FileReader();
+// reader.readAsDataURL(file);
+
+// reader.onload = (onLoadEvent : any)=>{
+//   this.ImageBase64String = onLoadEvent.target.result;
+//   console.log('ImageBase64String',this.ImageBase64String)
+//   // this.productForm1.controls['productImage'].setValue(this.ImageBase64String);
+
+//   this.http.saveDataToServer('products',this.ImageBase64String).subscribe((res:any)=>{
+//         console.log(res)
+//       })
+
+// };
+// reader.onerror = (onErrorEvent:any)=>{
+//   reader.abort();
+// }
+// }

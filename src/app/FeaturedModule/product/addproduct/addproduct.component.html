@@ -58,12 +58,19 @@
 
           <!-- drag and drop  -->
           <div class="mt-3 custom-border" formControlName="productImage">
-            <ngx-dropzone (change)="onSelect($event)" id="_nghost-ivm-c77" [disabled]="isEditable">
-              <!-- <ngx-dropzone-label >Drop Images!</ngx-dropzone-label > -->
-              <ngx-dropzone-image-preview  ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" >
-                <!-- <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label> -->
-              </ngx-dropzone-image-preview>
-            </ngx-dropzone>
+            <div class="image-upload">
+              <input type="file" (change)="onSelect($event)" accept=".jpg, .jpeg, .png" id="custom" formControlName="productImage">
+
+              <!-- <input class="addPhotos-inputFile form-control" type="file"  onclick="this.value = null" accept=".jpg, .jpeg, .png" (input)="uploadFileEvent($event)" /> -->
+
+                <label for="custom" class="drag-area">
+                  <img *ngIf="ImageBase64String" [src]="ImageBase64String" alt="Selected Image" class="align-img">
+                  <div class="upload-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span></span>
+                </div>
+              </label>
+            </div>
           </div>
         </form>
       </div>
