@@ -32,11 +32,9 @@ export class AddproductComponent {
       this.editProductDetails();
     }else if(this.isEditable){
       this.ViewProductDetails();
-      this.productForm2.get('gender')?.disable();
-      this.productForm1.get('category')?.disable();
-      this.productForm1.get('status')?.disable();
-    }else{
-      this.onSubmit()
+      // this.productForm2.get('gender')?.disable();
+      // this.productForm1.get('category')?.disable();
+      // this.productForm1.get('status')?.disable();
     }
   }
 
