@@ -1,5 +1,11 @@
-{"bardata" : [10,20,50,20,40,10,50,30,20,50,40,20],
-
-"piedata" : [60,10,5,10,15]
-
+{
+  "credentials": [
+    {
+      "username": "dsdsd",
+      "gender": "Female",
+      "contactnum": "dsdsadas",
+      "password": "sdsds",
+      "id": 1
+    }
+  ]
 }
