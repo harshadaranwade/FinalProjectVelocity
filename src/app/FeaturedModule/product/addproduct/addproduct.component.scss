@@ -1,0 +1,43 @@
+.height{
+  height: 60px;
+}
+label{
+  color: grey;
+  font-weight: 500;
+}
+input,textarea,select{
+  border: 1px solid rgb(196, 190, 190);
+}
+.container-style{
+  border: 1px solid rgb(134, 130, 130);
+  border-radius: 8px;
+  background-color: white;
+}
+.container{
+  width: 75vw;
+  margin-left: 15px;
+}
+
+.shade{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+// ::ng-deep [_nghost-ivm-c77] {
+//   /* Your overrides here */
+// }
+#_nghost-ivm-c77 {
+  display: flex;
+  align-items: center;
+  height: 230px;
+  background: #f3f4f8;
+  background-image: url('../../../../assets/drop.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  color: #717386;
+  border: 1px solid rgb(196, 190, 190);
+  border-radius: 5px;
+  font-size: 16px;
+  overflow-x: auto;
+}
