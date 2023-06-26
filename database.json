@@ -1,0 +1,167 @@
+{
+  "category": [
+    {
+      "CreatedAt": "2023-06-25T18:59:55.275Z",
+      "category": "toys kids",
+      "description": "35",
+      "id": 3
+    },
+    {
+      "CreatedAt": "2023-06-24T12:27:52.027Z",
+      "category": "men clothin",
+      "description": "565",
+      "id": 5
+    },
+    {
+      "CreatedAt": "2023-06-24T12:31:09.707Z",
+      "category": "men cloth",
+      "description": "56",
+      "id": 6
+    },
+    {
+      "CreatedAt": "2023-06-25T18:27:45.009Z",
+      "category": "himalaya baby shampoo",
+      "description": "babyshamp",
+      "id": 7
+    },
+    {
+      "CreatedAt": "2023-06-23T11:11:58.837Z",
+      "category": "shampoo",
+      "description": "baby shampoo",
+      "id": 10
+    },
+    {
+      "CreatedAt": "2023-06-23T11:11:58.837Z",
+      "category": "shampo",
+      "description": "baby shampoo",
+      "id": 25
+    },
+    {
+      "CreatedAt": "2023-06-25T12:01:56.031Z",
+      "category": "toys",
+      "description": "ball",
+      "id": 26
+    },
+    {
+      "CreatedAt": "2023-06-25T18:18:57.874Z",
+      "category": "shoes",
+      "description": "woodland",
+      "id": 27
+    },
+    {
+      "CreatedAt": "2023-06-25T18:21:09.278Z",
+      "category": "himalaya baby shampoo",
+      "description": "123",
+      "id": 28
+    },
+    {
+      "CreatedAt": "2023-06-25T18:59:27.647Z",
+      "category": "Electronics",
+      "description": "fridge",
+      "id": 29
+    }
+  ],
+  "products": [
+    {
+      "productName": "Laptop",
+      "description": "abc",
+      "category": "Electronics",
+      "brand": "HP",
+      "status": "In stock",
+      "sizes": "15.6",
+      "colors": "black",
+      "tags": "gadget",
+      "productImage": {},
+      "productCode": "dfdf",
+      "product_SKU": "sfd",
+      "gender": "male",
+      "qunatity": "3",
+      "regularPrice": "220000",
+      "salePrice": "12000",
+      "featured": true,
+      "id": 1
+    },
+    {
+      "productName": "HP Pavillion",
+      "description": "Laptop",
+      "category": "Electronics",
+      "brand": "HP",
+      "status": "In stock",
+      "sizes": "15.6",
+      "colors": "red",
+      "tags": "gadget",
+      "productImage": null,
+      "productCode": "12-Esb",
+      "product_SKU": "123",
+      "gender": "male",
+      "qunatity": "2",
+      "regularPrice": "20000",
+      "salePrice": "12000",
+      "featured": true,
+      "id": 2
+    }
+  ],
+  "credentials": [
+    {
+      "username": "velocity1@gmail.com",
+      "gender": "Male",
+      "contactnum": "23456",
+      "password": "dsfsfsf",
+      "id": 1
+    },
+    {
+      "username": "Harshada",
+      "gender": "Female",
+      "contactnum": "1111222233",
+      "password": "Harsh123",
+      "id": 2
+    }
+  ],
+  "newsSource": [
+    {
+      "news_head": "News",
+      "article": "Csfcdfcd",
+      "date": "2023-06-26",
+      "id": 27
+    },
+    {
+      "news_head": "hvfcv fdvgs",
+      "article": "gnghjgh",
+      "date": "2023-06-26",
+      "id": 28
+    }
+  ],
+  "Subs": [
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 4
+    },
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 5
+    },
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 6
+    },
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 7
+    }
+  ]
+
+}

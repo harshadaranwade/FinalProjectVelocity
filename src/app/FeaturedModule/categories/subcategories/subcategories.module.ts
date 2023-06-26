@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SubcategoriesComponent } from './subcategories.component';
@@ -16,3 +17,5 @@ import { SubCategorylistComponent } from './sub-categorylist/sub-categorylist.co
   ]
 })
 export class SubcategoriesModule { }
+=======
+>>>>>>> 18171e9bed4438f62f7dd7e5eacc3456f78aa5bb
