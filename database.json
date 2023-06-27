@@ -1,3 +1,4 @@
+
 {
   "category": [
     {
@@ -191,6 +192,111 @@
     10,
     5,
     10,
-    15
+    15],
+  "newsSource": [
+    {
+      "news_head": "News",
+      "article": "Csfcdfcd",
+      "date": "2023-06-26",
+      "id": 27
+    },
+    {
+      "news_head": "hvfcv fdvgs",
+      "article": "gnghjgh",
+      "date": "2023-06-26",
+      "id": 28
+    }
+  ],
+  "Subs": [
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 4
+    },
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 5
+    },
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 6
+    },
+    {
+      "name": "Tyson",
+      "email": "tyson@95.gmail.com",
+      "id": 7
+    }
+
+  ],
+  "orders": [
+    {
+      "imageUrl": "https://bellavitaorganic.com/cdn/shop/products/GrowthProteinHairOil-01_765x.jpg?v=1667202682",
+      "name": "HairOil",
+      "Createdat":"12/06/2023",
+      "status": "pending",
+      "price": "145",
+      "Quantity": "5"
+    },
+    {
+      "imageUrl": "https://th.bing.com/th/id/OIP.TeXYCGIyQqi_8P5LLfGQ4QHaHa?pid=ImgDet&rs=1",
+      "name": "Cashew Nuts",
+      "Createdat":"15/06/2023",
+      "status": "Successfull",
+      "price": "450",
+      "Quantity": "3"
+    },
+    {
+      "imageUrl": "https://www.smartphonesbd.com/images/phones/oppo-a33-2020.jpg",
+      "name": "mobile",
+      "Createdat":"16/06/2023",
+      "status": "pending",
+      "price": "20000",
+      "Quantity": "1"
+    },
+    {
+      "imageUrl": "https://n4.sdlcdn.com/imgs/f/4/g/Himalaya-Baby-Powder-200-gm-SDL289768392-1-e9cf0.jpg",
+      "name": "Baby Powder",
+      "Createdat":"18/06/2023",
+      "status": "pending",
+      "price": "200",
+      "Quantity": "2"
+    },
+    {
+      "imageUrl": "https://bellavitaorganic.com/cdn/shop/products/GrowthProteinHairOil-01_765x.jpg?v=1667202682",
+      "name": "HairOil",
+      "Createdat":"20/06/2023",
+      "status": "pending",
+      "price": "145",
+      "Quantity": "3"
+    },
+    {
+      "imageUrl": "https://www.smartphonesbd.com/images/phones/oppo-a33-2020.jpg",
+      "name": "mobile",
+      "Createdat":"21/06/2023",
+      "status": "pending",
+      "price": "20000",
+      "Quantity": "1"
+    },
+    {
+      "imageUrl": "https://i5.walmartimages.com/asr/d248064c-634a-4887-8538-a78157bb99a0_1.0b1f0e77bfdb16e57c23bb60a9c38478.jpeg",
+      "name": "Shampoo",
+      "Createdat":"25/06/2023",
+      "status": "pending",
+      "price": "100",
+      "Quantity": "6"
+    }
   ]
+
 }
