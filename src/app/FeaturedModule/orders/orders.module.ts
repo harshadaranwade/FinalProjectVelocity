@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { OrdersRoutingModule } from './orders-routing.module';
 import { OrdersComponent } from './orders.component';
-
+import { MaterialModule } from 'src/app/MaterialModule/material/material.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,9 @@ import { OrdersComponent } from './orders.component';
   ],
   imports: [
     CommonModule,
-    OrdersRoutingModule
+    OrdersRoutingModule,
+    MaterialModule,
+    HttpClientModule
   ]
 })
 export class OrdersModule { }

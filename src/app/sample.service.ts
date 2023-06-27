@@ -8,7 +8,7 @@ export class SampleService {
 
   constructor(private http:HttpClient) { }
 
-  baseUrl:string = 'http://localhost:3000';
+  baseUrl:string = 'http://localhost:3000/';
   httpHeaders:HttpHeaders = new HttpHeaders().set("Content-Type","application/json");
 
   getDataFromServer(endPoint:string){
