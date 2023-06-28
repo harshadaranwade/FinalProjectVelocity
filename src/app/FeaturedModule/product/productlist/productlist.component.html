@@ -8,7 +8,7 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Product </th>
         <td mat-cell *matCellDef="let row">
           <div class="product-details">
-            <img [src]="row.image" alt="Product Image" class="img me-2">
+            <img [src]="row.productImage" alt="Product Image" class="img me-2">
             <span>{{ row.productName }}</span>
           </div>
         </td>
@@ -54,9 +54,9 @@
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
         <td mat-cell *matCellDef="let row; let i = index">
-          <mat-icon [routerLink]="['addproduct/']" [queryParams]="{'productName' : row.productName,'id' : row.id}">visibility</mat-icon>
-          <mat-icon class="mx-2" [routerLink]="['addproduct/']" [queryParams]="{'id' : row.id}">edit</mat-icon>
-          <mat-icon (click)="deleteProduct(row,i)">delete</mat-icon>
+          <mat-icon [routerLink]="['/product/addproduct']" [queryParams]="{'productName' : row.productName,'id' : row.id, 'temp' : true}" id="cursor">visibility</mat-icon>
+          <mat-icon class="mx-2" [routerLink]="['/product/addproduct']" [queryParams]="{'id' : row.id, 'flag' : true}" id="cursor">edit</mat-icon>
+          <mat-icon (click)="deleteProduct(row,i,'2000ms','1500ms')" id="cursor">delete</mat-icon>
           <!-- <button mat-raised-button (click)="deleteProduct(row,i,'0ms','0ms')">Delete</button> -->
 
         </td>

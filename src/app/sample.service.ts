@@ -16,8 +16,15 @@ export class SampleService {
   }
 
   saveDataToServer(endPoint:string,body:any){
+    const currentDate = {
+      'created_at' : new Date()
+    }
+    const payload = {
+      ...currentDate,
+      ...body
+    }
     const url = this.baseUrl + endPoint;
-    return this.http.post(url,body,{headers:this.httpHeaders});
+    return this.http.post(url,payload,{headers:this.httpHeaders});
   }
 
   deleteDataFromServer(endPoint:any){
@@ -25,13 +32,15 @@ export class SampleService {
     return this.http.delete(url,{headers:this.httpHeaders})
   }
 
-  // editData(endPoint:string,id:any){
-  //   const url = this.baseUrl + endPoint;
-  //   let queryParam = new HttpParams().set('user_id',id)
-  //   return this.http.get(url,{params:queryParam})
-  // }
   updateDataToServer(endPoint:string,body:any){
+    const currentDate = {
+      'created_at' : new Date()
+    }
+    const payload = {
+      ...currentDate,
+      ...body
+    }
     const url = this.baseUrl + endPoint;
-    return this.http.put(url,body,{headers:this.httpHeaders});
+    return this.http.put(url,payload,{headers:this.httpHeaders});
   }
 }

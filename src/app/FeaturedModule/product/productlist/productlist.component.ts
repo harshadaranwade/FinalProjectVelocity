@@ -44,9 +44,6 @@ export class ProductlistComponent implements OnInit {
     this.http.getDataFromServer('products').subscribe((response:any)=>{
       if(response && response.length > 0){
 
-        response.forEach((row:any)=>{
-          row.created_at = new Date();
-        })
 
         this.dataSource = new MatTableDataSource(response);
         this.dataSource.paginator = this.paginator;
@@ -59,11 +56,6 @@ export class ProductlistComponent implements OnInit {
     })
   }
 
-  // editProduct(product:any){
-  //   console.log(product)
-  //   // this.router.navigate(['/product/addProduct'])
-
-  // }
   deleteProduct(rowData:any,index:any,enterAnimationDuration?: string, exitAnimationDuration?: string){
     let config = new MatDialogConfig();
     config.width = "700px";
