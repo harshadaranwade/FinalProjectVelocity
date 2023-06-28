@@ -26,11 +26,10 @@ let materialModules=[
   MatButtonModule,
   MatSidenavModule,
   MatListModule,
-
+MatCardModule,
   MatSlideToggleModule,
   MatIconModule,
   MatSortModule,
-  MatPaginatorModule,
   MatProgressSpinnerModule,
   MatRadioModule,
   MatFormFieldModule,
@@ -39,7 +38,10 @@ let materialModules=[
   MatExpansionModule,
   MatInputModule,
   MatDialogModule,
-MatTableModule
+MatTableModule,
+MatDialogModule,
+MatPaginatorModule,
+
 
 ]
 
@@ -49,6 +51,6 @@ MatTableModule
     CommonModule,
     materialModules
   ],
-  exports:[materialModules]
+  exports: [materialModules]
 })
 export class MaterialModule { }

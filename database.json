@@ -1,12 +1,6 @@
 {
   "category": [
     {
-      "CreatedAt": "2023-06-25T18:59:55.275Z",
-      "category": "toys kids",
-      "description": "35",
-      "id": 3
-    },
-    {
       "CreatedAt": "2023-06-24T12:27:52.027Z",
       "category": "men clothin",
       "description": "565",
@@ -129,6 +123,20 @@
       "contactnum": "2323232323",
       "password": "Harshali123",
       "id": 4
+    },
+    {
+      "username": "velocity222",
+      "gender": "Male",
+      "contactnum": "23456723345",
+      "password": "ddsdsdsdsd",
+      "id": 5
+    },
+    {
+      "username": "velocityangular",
+      "gender": "Male",
+      "contactnum": "1234567890",
+      "password": "velocity123",
+      "id": 6
     }
   ],
   "newsSource": [
@@ -177,5 +185,4 @@
       "id": 7
     }
   ]
-
 }

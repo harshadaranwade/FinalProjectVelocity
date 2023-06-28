@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './SharedModules/shared/shared.module';
 import { MaterialModule } from './MaterialModule/material/material.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppProjectInterceptor } from './CoreModules/InterCeptors/app-project.interceptor';
@@ -25,19 +26,20 @@ import { AppProjectInterceptor } from './CoreModules/InterCeptors/app-project.in
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
-    MaterialModule,
+   
     NgbModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterialModule,
 
 
   ],
   providers: [ 
-  //   {
-  //   provide:HTTP_INTERCEPTORS,
-  //   useClass:AppProjectInterceptor,
-  //   multi:true
-  // }
+    {
+    provide:HTTP_INTERCEPTORS,
+    useClass:AppProjectInterceptor,
+    multi:true
+  }
 ],
   bootstrap: [AppComponent]
 })
