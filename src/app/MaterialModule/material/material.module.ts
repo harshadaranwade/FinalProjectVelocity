@@ -24,6 +24,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 
 
 
+
 let materialModules = [
   MatToolbarModule,
   MatIconModule,
@@ -44,11 +45,15 @@ let materialModules = [
   MatRadioModule,
   
   MatSelectModule,
+  MatSlideToggleModule,
+  MatToolbarModule,
+  MatExpansionModule,
+  MatInputModule,
+  MatDialogModule
+  
 
  
-  MatInputModule,
  
-  MatSlideToggleModule,
 
 
 ]
