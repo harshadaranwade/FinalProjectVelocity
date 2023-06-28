@@ -1,6 +1,34 @@
+
 {
   "category": [
     {
+<<<<<<< HEAD
+=======
+      "CreatedAt": "2023-06-24T12:27:52.027Z",
+      "category": "men clothin",
+      "description": "565",
+      "id": 5
+    },
+    {
+      "CreatedAt": "2023-06-24T12:31:09.707Z",
+      "category": "men cloth",
+      "description": "56",
+      "id": 6
+    },
+    {
+      "CreatedAt": "2023-06-25T18:27:45.009Z",
+      "category": "himalaya baby shampoo",
+      "description": "babyshamp",
+      "id": 7
+    },
+    {
+      "CreatedAt": "2023-06-25T18:59:55.275Z",
+      "category": "toys kids",
+      "description": "35",
+      "id": 3
+    },
+    {
+>>>>>>> 25fba18ee8498968f6525e6db61f815a78a9f46f
       "CreatedAt": "2023-06-24T12:27:52.027Z",
       "category": "men clothin",
       "description": "565",
@@ -184,5 +212,133 @@
       "email": "tyson@95.gmail.com",
       "id": 7
     }
+  ],
+  "orders": [
+    {
+      "imageUrl": "https://bellavitaorganic.com/cdn/shop/products/GrowthProteinHairOil-01_765x.jpg?v=1667202682",
+      "name": "HairOil",
+      "Createdat":"12/06/2023",
+      "status": "pending",
+      "price": "145",
+      "Quantity": "5"
+    },
+    {
+      "imageUrl": "https://th.bing.com/th/id/OIP.TeXYCGIyQqi_8P5LLfGQ4QHaHa?pid=ImgDet&rs=1",
+      "name": "Cashew Nuts",
+      "Createdat":"15/06/2023",
+      "status": "Successfull",
+      "price": "450",
+      "Quantity": "3"
+    },
+    {
+      "imageUrl": "https://www.smartphonesbd.com/images/phones/oppo-a33-2020.jpg",
+      "name": "mobile",
+      "Createdat":"16/06/2023",
+      "status": "pending",
+      "price": "20000",
+      "Quantity": "1"
+    },
+    {
+      "imageUrl": "https://n4.sdlcdn.com/imgs/f/4/g/Himalaya-Baby-Powder-200-gm-SDL289768392-1-e9cf0.jpg",
+      "name": "Baby Powder",
+      "Createdat":"18/06/2023",
+      "status": "pending",
+      "price": "200",
+      "Quantity": "2"
+    },
+    {
+      "imageUrl": "https://bellavitaorganic.com/cdn/shop/products/GrowthProteinHairOil-01_765x.jpg?v=1667202682",
+      "name": "HairOil",
+      "Createdat":"20/06/2023",
+      "status": "pending",
+      "price": "145",
+      "Quantity": "3"
+    },
+    {
+      "imageUrl": "https://www.smartphonesbd.com/images/phones/oppo-a33-2020.jpg",
+      "name": "mobile",
+      "Createdat":"21/06/2023",
+      "status": "pending",
+      "price": "20000",
+      "Quantity": "1"
+    },
+    {
+      "imageUrl": "https://i5.walmartimages.com/asr/d248064c-634a-4887-8538-a78157bb99a0_1.0b1f0e77bfdb16e57c23bb60a9c38478.jpeg",
+      "name": "Shampoo",
+      "Createdat":"25/06/2023",
+      "status": "pending",
+      "price": "100",
+      "Quantity": "6"
+    }
+  ],
+  "registerUser": [
+    {
+      "user": "Monsatafa",
+      "email":"monsabagh00@gmail.com",
+      "phone": "87654345678",
+      "status": "Active",
+      "joined": "25 May 2023 16:19"
+    },
+    {
+      "user": "Aohrat",
+      "email":"achrof@gmail.com",
+      "phone": "98754345678",
+      "status": "Active",
+      "joined": "20 May 2023 19:37"
+    },
+    {
+      "user": "ram",
+      "email":"abc@gmail.com",
+      "phone": "87654345678",
+      "status": "Active",
+      "joined": "5/10/2020"
+    },
+    {
+      "user": "tina",
+      "email":"abc@gmail.com",
+      "phone": "87654345678",
+      "status": "Active",
+      "joined": "5/10/2020"
+    },
+    {
+      "user": "gita",
+      "email":"abc@gmail.com",
+      "phone": "87654345678",
+      "status": "Active",
+      "joined": "5/10/2020"
+    },
+    {
+      "user": "mina",
+      "email":"abc@gmail.com",
+      "phone": "87654345678",
+      "status": "Active",
+      "joined": "5/10/2020"
+    },
+    {
+      "user": "sita",
+      "email":"abc@gmail.com",
+      "phone": "87654345678",
+      "status": "Active",
+      "joined": "5/10/2020"
+    },
+    {
+      "user": "roy",
+      "email":"abc@gmail.com",
+      "phone": "87654345678",
+      "status": "Active",
+      "joined": "5/10/2020"
+    },
+    {
+      "user": "rocky",
+      "email":"abc@gmail.com",
+      "phone": "87654345678",
+      "status": "notVerified",
+      "joined": "5/10/2020"
+    }
   ]
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> 25fba18ee8498968f6525e6db61f815a78a9f46f

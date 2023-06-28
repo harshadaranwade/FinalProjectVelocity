@@ -22,22 +22,52 @@ input,textarea,select{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-
-// ::ng-deep [_nghost-ivm-c77] {
-//   /* Your overrides here */
-// }
-#_nghost-ivm-c77 {
-  display: flex;
-  align-items: center;
-  height: 230px;
-  background: #f3f4f8;
+.image-upload {
+  position: relative;
+  display: inline-block;
   background-image: url('../../../../assets/drop.png');
-  background-repeat: no-repeat;
-  background-size: contain;
+  // background-size: ;
+}
+
+.image-upload input[type="file"] {
+  display: none;
+}
+
+.drag-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid grey;
+  width: 46.5vw;
+  height: 40vh;
   cursor: pointer;
-  color: #717386;
-  border: 1px solid rgb(196, 190, 190);
-  border-radius: 5px;
-  font-size: 16px;
-  overflow-x: auto;
+}
+
+.upload-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-icon i {
+  font-size: 2em;
+}
+
+.upload-icon span {
+  margin-top: 0.5em;
+}
+
+.align-img {
+  max-width: 200px;
+  max-height: 200px;
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  opacity: 95%;
+  border-radius: 10px;
+}
+
+button {
+  margin-top: 1em;
 }

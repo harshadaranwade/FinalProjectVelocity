@@ -9,7 +9,7 @@ import { MaterialModule } from 'src/app/MaterialModule/material/material.module'
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbRating } from '@ng-bootstrap/ng-bootstrap';
-import { NgxDropzoneModule } from 'ngx-dropzone';
+import {MatButtonModule} from '@angular/material/button';
 import { DeletedialogComponent } from './deletedialog/deletedialog.component';
 
 
@@ -29,7 +29,7 @@ import { DeletedialogComponent } from './deletedialog/deletedialog.component';
     ReactiveFormsModule,
     MaterialModule,
     NgbRating,
-    NgxDropzoneModule
+   MatButtonModule
   ]
 })
 export class ProductModule { }
