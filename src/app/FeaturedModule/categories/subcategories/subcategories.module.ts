@@ -1,9 +1,14 @@
-<<<<<<< HEAD
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SubcategoriesComponent } from './subcategories.component';
 import { AddCategorylistComponent } from './add-categorylist/add-categorylist.component';
 import { SubCategorylistComponent } from './sub-categorylist/sub-categorylist.component';
+import { MaterialModule } from 'src/app/MaterialModule/material/material.module';
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -13,9 +18,15 @@ import { SubCategorylistComponent } from './sub-categorylist/sub-categorylist.co
     SubCategorylistComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTableModule,
   ]
 })
 export class SubcategoriesModule { }
-=======
->>>>>>> 18171e9bed4438f62f7dd7e5eacc3456f78aa5bb
+

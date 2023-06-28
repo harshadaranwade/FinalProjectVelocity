@@ -1,4 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { HttpService } from 'src/app/http.service';
 
@@ -14,7 +17,7 @@ export class SubCategorylistComponent {
 
     displayedColumns: any[] = ["category","description","Total_items","CreatedAt","Actions"];
     // FindIndex!:any;
-    dataSource!:any;
+    dataSource!:MatTableDataSource<any>;
     // todaysDate = new Date();
 
     // data:any[]=[];
@@ -39,19 +42,7 @@ export class SubCategorylistComponent {
      this.dataSource.paginator = this.paginator;}
       }
     )}
-    
-        // this.dataSource.paginator=this.paginator;
-        // this.dataSource.sort =this.sort;
-    // deleteProduct(row:any,index:any){
-    //   const url = 'products/' + row.id;
-    //   this.http.deleteData(url).subscribe((response: any) => {
-    //     const data = this.dataSource.data; // Get the underlying data array
-    //     data.splice(index, 1); // Remove the item from the data array
-    //     this.dataSource.data = data;
-    //     this.dataSource._updateChangeSubscription(response);
-    //   })
-  
-    
+     
     OnDelete(rowData: any,index:number) 
     {
       if (confirm("Do you really want to delete")){
