@@ -17,15 +17,14 @@ export class AppProjectInterceptor implements HttpInterceptor {
     console.log("Inside Http Interceptor",request);
 
 
-    ///===========Adding Token===========//
-    //||!request.url.includes("")
-    // if(!request.url.includes("login")){
-
-    // }
-    // else{
-    //   const token="BHHHHDDWHKHKDHKWWGJHG";
-    //   request=request.clone({setHeaders:{"Authorization":"Bearer"+token}})
-    // }
+    //===========Adding Token===========//
+    let isLoggedIn=sessionStorage.getItem("isLoggedIn");
+     if(isLoggedIn=="True"){
+      const token="HHHHDDWHKHKDHKWWGJHG";
+      request=request.clone({setHeaders:{"Authorization":"Bearer"+token}});
+      console.log("Token set")
+    }
+   
 
     //=================Checking for Response============//
     return next.handle(request).pipe(map((resp:any)=>{

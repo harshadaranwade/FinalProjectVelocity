@@ -2,6 +2,8 @@
 {
   "category": [
     {
+<<<<<<< HEAD
+=======
       "CreatedAt": "2023-06-24T12:27:52.027Z",
       "category": "men clothin",
       "description": "565",
@@ -26,6 +28,7 @@
       "id": 3
     },
     {
+>>>>>>> 25fba18ee8498968f6525e6db61f815a78a9f46f
       "CreatedAt": "2023-06-24T12:27:52.027Z",
       "category": "men clothin",
       "description": "565",
@@ -134,6 +137,34 @@
       "contactnum": "1111222233",
       "password": "Harsh123",
       "id": 2
+    },
+    {
+      "username": "Velocity2",
+      "gender": "Male",
+      "contactnum": "2323232323",
+      "password": "Velocity222",
+      "id": 3
+    },
+    {
+      "username": "Harshali",
+      "gender": "Female",
+      "contactnum": "2323232323",
+      "password": "Harshali123",
+      "id": 4
+    },
+    {
+      "username": "velocity222",
+      "gender": "Male",
+      "contactnum": "23456723345",
+      "password": "ddsdsdsdsd",
+      "id": 5
+    },
+    {
+      "username": "velocityangular",
+      "gender": "Male",
+      "contactnum": "1234567890",
+      "password": "velocity123",
+      "id": 6
     }
   ],
   "newsSource": [
@@ -305,5 +336,9 @@
       "joined": "5/10/2020"
     }
   ]
+<<<<<<< HEAD
+}
+=======
 
 }
+>>>>>>> 25fba18ee8498968f6525e6db61f815a78a9f46f
