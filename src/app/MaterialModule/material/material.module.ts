@@ -21,7 +21,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatExpansionModule } from '@angular/material/expansion';
-
+import {MatInputModule} from '@angular/material/input';
 
 
 
@@ -32,18 +32,14 @@ let materialModules = [
   MatSidenavModule,
   MatListModule,
   MatExpansionModule,
-  
-
   MatFormFieldModule,
   MatCardModule,
- 
   MatTableModule,
   MatPaginatorModule,
   MatDialogModule,
   MatSortModule,
   MatProgressSpinnerModule,
   MatRadioModule,
-  
   MatSelectModule,
   MatSlideToggleModule,
   MatToolbarModule,
