@@ -1,6 +1,8 @@
 <!-- ==================================Login Display============================= -->
 <div class="container" *ngIf="router.url=='/login'">
+ 
   <router-outlet></router-outlet>
+ 
 </div>
 
 <!-- =============================Home Display=================================== -->
@@ -16,8 +18,8 @@
     <span></span>
     <span class="example-spacer"></span>
 
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with logout icon" routerLink="/login">
-      <!-- <mat-icon>power_settings_new</mat-icon> -->
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with logout icon" (click)="logOut()" >
+      <!-- routerLink="/login"  <mat-icon>power_settings_new</mat-icon> -->
       <mat-icon>exit_to_app</mat-icon>
     </button>
   </mat-toolbar>
@@ -42,7 +44,7 @@
           </mat-expansion-panel-header>
           <mat-divider></mat-divider>
           <mat-nav-list>
-            <a mat-list-item routerLink="#" class="nav" routerLinkActive="active">
+            <a mat-list-item routerLink="/categories" class="nav" routerLinkActive="active">
               <span class="nav "><mat-icon>check_circle</mat-icon>Main Categories</span>
             </a>
             <mat-divider></mat-divider>

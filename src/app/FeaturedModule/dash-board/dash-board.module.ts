@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { DashBoardRoutingModule } from './dash-board-routing.module';
 import { DashBoardComponent } from './dash-board.component';
-
+import { MaterialModule } from 'src/app/MaterialModule/material/material.module';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -11,7 +13,13 @@ import { DashBoardComponent } from './dash-board.component';
   ],
   imports: [
     CommonModule,
-    DashBoardRoutingModule
+    DashBoardRoutingModule,
+    MaterialModule,
+    HighchartsChartModule,
+    HttpClientModule
   ]
 })
-export class DashBoardModule { }
+export class DashBoardModule { 
+ 
+
+}
