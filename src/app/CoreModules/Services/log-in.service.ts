@@ -20,7 +20,7 @@ export class LogInService {
 
   saveDataToDataBase(endPoint:string,body:any){
     const url=this.baseUrl+endPoint;
-    return this.http.post(url,body);
+    return this.http.post(url,body,{headers:this.httpHeader});
   }
   // savedataservice(endPoint:string,body:any){
   //   const url=this.baseUrl+endPoint;

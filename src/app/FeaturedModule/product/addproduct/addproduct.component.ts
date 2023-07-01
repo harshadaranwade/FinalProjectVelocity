@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SampleService } from 'src/app/sample.service';
@@ -8,7 +8,7 @@ import { SampleService } from 'src/app/sample.service';
   templateUrl: './addproduct.component.html',
   styleUrls: ['./addproduct.component.scss']
 })
-export class AddproductComponent {
+export class AddproductComponent implements OnInit,OnDestroy {
   productForm1!:FormGroup;
   productForm2!:FormGroup;
   productForm3!:FormGroup;
@@ -19,6 +19,7 @@ export class AddproductComponent {
   selectedId!:any;
   viewProduct!:any;
   isEditable!:any;
+  backButton!:any;
   ngOnInit() {
     this.createForm();
     this.selectedId = this.route.snapshot.queryParamMap.get('id');
@@ -28,6 +29,8 @@ export class AddproductComponent {
     console.log(this.isEditable)
     this.viewProduct = this.route.snapshot.queryParamMap.get('productName');
     console.log(this.viewProduct)
+    this.backButton = this.route.snapshot.queryParamMap.get('flag');
+    console.log(this.backButton);
     if(this.selectedId){
       this.editProductDetails();
     }else if(this.isEditable){
@@ -36,6 +39,12 @@ export class AddproductComponent {
       // this.productForm1.get('category')?.disable();
       // this.productForm1.get('status')?.disable();
     }
+  }
+
+  ngOnDestroy(){
+this.viewProduct = false;
+this.isEditable = false;
+this.backButton = false;
   }
 
   createForm(){
@@ -48,7 +57,7 @@ export class AddproductComponent {
       "sizes" : ['',Validators.required],
       "colors" : ['',Validators.required],
       "tags" : ['',Validators.required],
-      "productImage" : []
+      "productImage" : [""]
     })
 
     this.productForm2 = this.fb.group({
@@ -62,6 +71,10 @@ export class AddproductComponent {
       "regularPrice" : ['',Validators.required],
       "salePrice" : ['']
     })
+  }
+
+  get productName(){
+    return this.productForm1.get('productName');
   }
 
 

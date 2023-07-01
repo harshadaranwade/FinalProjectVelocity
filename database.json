@@ -1,6 +1,23 @@
-
 {
   "category": [
+    {
+      "CreatedAt": "2023-06-24T12:31:09.707Z",
+      "category": "men cloth",
+      "description": "56",
+      "id": 6
+    },
+    {
+      "CreatedAt": "2023-06-25T18:27:45.009Z",
+      "category": "himalaya baby shampoo",
+      "description": "babyshamp",
+      "id": 7
+    },
+    {
+      "CreatedAt": "2023-06-25T18:59:55.275Z",
+      "category": "toys kids",
+      "description": "35",
+      "id": 3
+    },
     {
       "CreatedAt": "2023-06-24T12:27:52.027Z",
       "category": "men clothin",
@@ -54,106 +71,51 @@
       "category": "Electronics",
       "description": "fridge",
       "id": 29
+    },
+    {
+      "CreatedAt": "2023-07-01T13:16:24.204Z",
+      "category": "Jar",
+      "description": "cylinder",
+      "id": 30
     }
   ],
   "products": [
     {
-      "created_at": "2023-06-26T13:58:02.253Z",
-      "productName": "Camera",
-      "description": "Lenovo",
-      "category": "Electronics",
-      "brand": "Lenovo",
-      "status": "In stock",
-      "sizes": "15.6",
-      "colors": "black",
-      "tags": "gadget",
-      "productImage": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "productCode": "dfdf",
-      "product_SKU": "sfd",
-      "gender": "male",
-      "qunatity": "2",
-      "regularPrice": "20000",
-      "salePrice": "12000",
-      "featured": true,
-      "id": 1
-    },
-    {
-      "created_at": "2023-06-26T13:58:02.253Z",
-      "productName": "Mobile",
-      "description": "Lenovo",
-      "category": "Electronics",
-      "brand": "Lenovo",
-      "status": "In stock",
-      "sizes": "15.6",
-      "colors": "black",
-      "tags": "gadget",
-      "productImage": "https://images.squarespace-cdn.com/content/v1/59d2bea58a02c78793a95114/1638557435572-UYISRNGX323H0CMYA0XM/iPhone+13.png?format=1000w",
-      "productCode": "dfdf",
-      "product_SKU": "sfd",
-      "gender": "male",
-      "qunatity": "2",
-      "regularPrice": "20000",
-      "salePrice": "12000",
-      "featured": true,
-      "id": 1
-    },
-    {
-      "created_at": "2023-06-26T13:58:02.253Z",
-      "productName": "TV",
-      "description": "Lenovo",
-      "category": "Electronics",
-      "brand": "Lenovo",
-      "status": "In stock",
-      "sizes": "15.6",
-      "colors": "black",
-      "tags": "gadget",
-      "productImage": "https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100",
-      "productCode": "dfdf",
-      "product_SKU": "sfd",
-      "gender": "male",
-      "qunatity": "2",
-      "regularPrice": "20000",
-      "salePrice": "12000",
-      "featured": true,
-      "id": 1
-    },
-    {
-      "created_at": "2023-06-26T13:58:02.253Z",
       "productName": "Laptop",
-      "description": "Lenovo",
+      "description": "abc",
       "category": "Electronics",
-      "brand": "Lenovo",
+      "brand": "HP",
       "status": "In stock",
       "sizes": "15.6",
       "colors": "black",
       "tags": "gadget",
-      "productImage": "https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100",
+      "productImage": {},
       "productCode": "dfdf",
       "product_SKU": "sfd",
       "gender": "male",
-      "qunatity": "2",
-      "regularPrice": "20000",
+      "qunatity": "3",
+      "regularPrice": "220000",
       "salePrice": "12000",
       "featured": true,
       "id": 1
     },
     {
-      "created_at": "2023-06-26T15:30:45.973Z",
-      "productName": "",
-      "description": "",
-      "category": "",
-      "brand": "",
-      "status": "",
-      "sizes": "",
-      "colors": "",
-      "tags": "",
+      "productName": "HP Pavillion",
+      "description": "Laptop",
+      "category": "Electronics",
+      "brand": "HP",
+      "status": "In stock",
+      "sizes": "15.6",
+      "colors": "red",
+      "tags": "gadget",
       "productImage": null,
-      "productCode": "",
-      "product_SKU": "",
-      "gender": "",
-      "qunatity": "",
-      "regularPrice": "",
-      "salePrice": "",
+      "productCode": "12-Esb",
+      "product_SKU": "123",
+      "gender": "male",
+      "qunatity": "2",
+      "regularPrice": "20000",
+      "salePrice": "12000",
+      "featured": true,
       "id": 2
     }
   ],
@@ -171,28 +133,43 @@
       "contactnum": "1111222233",
       "password": "Harsh123",
       "id": 2
+    },
+    {
+      "username": "Velocity2",
+      "gender": "Male",
+      "contactnum": "2323232323",
+      "password": "Velocity222",
+      "id": 3
+    },
+    {
+      "username": "Harshali",
+      "gender": "Female",
+      "contactnum": "2323232323",
+      "password": "Harshali123",
+      "id": 4
+    },
+    {
+      "username": "velocity222",
+      "gender": "Male",
+      "contactnum": "23456723345",
+      "password": "ddsdsdsdsd",
+      "id": 5
+    },
+    {
+      "username": "velocityangular",
+      "gender": "Male",
+      "contactnum": "1234567890",
+      "password": "velocity123",
+      "id": 6
     }
-  ],
-  "bardata": [
-    10,
-    20,
-    50,
-    20,
-    40,
-    10,
-    50,
-    30,
-    20,
-    50,
-    40,
-    20
   ],
   "piedata": [
     60,
     10,
     5,
     10,
-    15],
+    15
+  ],
   "newsSource": [
     {
       "news_head": "News",
@@ -205,6 +182,12 @@
       "article": "gnghjgh",
       "date": "2023-06-26",
       "id": 28
+    },
+    {
+      "news_head": "abcc",
+      "article": "dadasda",
+      "date": "2023-07-01",
+      "id": 29
     }
   ],
   "Subs": [
@@ -238,13 +221,12 @@
       "email": "tyson@95.gmail.com",
       "id": 7
     }
-
   ],
   "orders": [
     {
       "imageUrl": "https://bellavitaorganic.com/cdn/shop/products/GrowthProteinHairOil-01_765x.jpg?v=1667202682",
       "name": "HairOil",
-      "Createdat":"12/06/2023",
+      "Createdat": "12/06/2023",
       "status": "pending",
       "price": "145",
       "Quantity": "5"
@@ -252,7 +234,7 @@
     {
       "imageUrl": "https://th.bing.com/th/id/OIP.TeXYCGIyQqi_8P5LLfGQ4QHaHa?pid=ImgDet&rs=1",
       "name": "Cashew Nuts",
-      "Createdat":"15/06/2023",
+      "Createdat": "15/06/2023",
       "status": "Successfull",
       "price": "450",
       "Quantity": "3"
@@ -260,7 +242,7 @@
     {
       "imageUrl": "https://www.smartphonesbd.com/images/phones/oppo-a33-2020.jpg",
       "name": "mobile",
-      "Createdat":"16/06/2023",
+      "Createdat": "16/06/2023",
       "status": "pending",
       "price": "20000",
       "Quantity": "1"
@@ -268,7 +250,7 @@
     {
       "imageUrl": "https://n4.sdlcdn.com/imgs/f/4/g/Himalaya-Baby-Powder-200-gm-SDL289768392-1-e9cf0.jpg",
       "name": "Baby Powder",
-      "Createdat":"18/06/2023",
+      "Createdat": "18/06/2023",
       "status": "pending",
       "price": "200",
       "Quantity": "2"
@@ -276,7 +258,7 @@
     {
       "imageUrl": "https://bellavitaorganic.com/cdn/shop/products/GrowthProteinHairOil-01_765x.jpg?v=1667202682",
       "name": "HairOil",
-      "Createdat":"20/06/2023",
+      "Createdat": "20/06/2023",
       "status": "pending",
       "price": "145",
       "Quantity": "3"
@@ -284,7 +266,7 @@
     {
       "imageUrl": "https://www.smartphonesbd.com/images/phones/oppo-a33-2020.jpg",
       "name": "mobile",
-      "Createdat":"21/06/2023",
+      "Createdat": "21/06/2023",
       "status": "pending",
       "price": "20000",
       "Quantity": "1"
@@ -292,11 +274,75 @@
     {
       "imageUrl": "https://i5.walmartimages.com/asr/d248064c-634a-4887-8538-a78157bb99a0_1.0b1f0e77bfdb16e57c23bb60a9c38478.jpeg",
       "name": "Shampoo",
-      "Createdat":"25/06/2023",
+      "Createdat": "25/06/2023",
       "status": "pending",
       "price": "100",
       "Quantity": "6"
     }
+  ],
+  "registerUser": [
+    {
+      "user": "Monsatafa",
+      "email": "monsabagh00@gmail.com",
+      "phone": "87654345678",
+      "status": "Active",
+      "joined": "25 May 2023 16:19"
+    },
+    {
+      "user": "Aohrat",
+      "email": "achrof@gmail.com",
+      "phone": "98754345678",
+      "status": "Active",
+      "joined": "20 May 2023 19:37"
+    },
+    {
+      "user": "ram",
+      "email": "abc@gmail.com",
+      "phone": "87654345678",
+      "status": "Active",
+      "joined": "5/10/2020"
+    },
+    {
+      "user": "tina",
+      "email": "abc@gmail.com",
+      "phone": "87654345678",
+      "status": "Active",
+      "joined": "5/10/2020"
+    },
+    {
+      "user": "gita",
+      "email": "abc@gmail.com",
+      "phone": "87654345678",
+      "status": "Active",
+      "joined": "5/10/2020"
+    },
+    {
+      "user": "mina",
+      "email": "abc@gmail.com",
+      "phone": "87654345678",
+      "status": "Active",
+      "joined": "5/10/2020"
+    },
+    {
+      "user": "sita",
+      "email": "abc@gmail.com",
+      "phone": "87654345678",
+      "status": "Active",
+      "joined": "5/10/2020"
+    },
+    {
+      "user": "roy",
+      "email": "abc@gmail.com",
+      "phone": "87654345678",
+      "status": "Active",
+      "joined": "5/10/2020"
+    },
+    {
+      "user": "rocky",
+      "email": "abc@gmail.com",
+      "phone": "87654345678",
+      "status": "notVerified",
+      "joined": "5/10/2020"
+    }
   ]
-
 }

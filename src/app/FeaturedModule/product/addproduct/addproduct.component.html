@@ -7,7 +7,12 @@
           <div class="mb-3">
             <label for="pName" class="form-label">Product Name</label>
             <input type="text" class="form-control height" id="pName" formControlName="productName" [readOnly]="isEditable">
+
+      <div class="row" *ngIf="productName?.invalid">
+        <div class="invalid-feedback d-block" *ngIf="productName?.errors?.['required']">This field is required</div>
+      </div>
           </div>
+
 
           <div class="mb-3">
             <label for="textarea" class="form-label">Description</label>
@@ -57,7 +62,7 @@
           </div>
 
           <!-- drag and drop  -->
-          <div class="mt-3 custom-border" formControlName="productImage">
+          <div class="mt-3 custom-border" >
             <div class="image-upload">
               <input type="file" (change)="onSelect($event)" accept="image/*" id="custom" formControlName="productImage">
                 <label for="custom" class="drag-area">
@@ -125,15 +130,15 @@
             <mat-slide-toggle (click)="buttonState($event)" [disabled]="isEditable">Featured Product</mat-slide-toggle>
           </div>
 
-          <div *ngIf="isEditable; then thenBlock; else elseBlock">
+          <div *ngIf="isEditable || backButton; then thenBlock; else elseBlock">
           </div>
           <ng-template #thenBlock>
             <!-- Content when isEditable is true -->
-            <button mat-raised-button color="accent" style="max-width: 100%; width: 300px;" class="mt-3 ms-3 shade" routerLink="/product/productList">Go Back</button>
+            <button mat-raised-button color="accent" style="max-width: 100%; width: 300px;" class="mt-3 ms-3 shade" routerLink="/product">Go Back</button>
           </ng-template>
           <ng-template #elseBlock>
             <!-- Content when isEditable is false -->
-            <button mat-raised-button color="accent" type="submit" style="max-width: 100%; width: 300px;" class="mt-3 ms-3 shade">Create Product</button>
+            <button mat-raised-button color="accent" type="submit" style="max-width: 100%; width: 300px;" class="mt-3 ms-3 shade" [disabled]="productForm1.invalid && productForm2.invalid && productForm3.invalid ">Create Product</button>
           </ng-template>
         </form>
       </div>
