@@ -27,7 +27,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatExpansionModule } from '@angular/material/expansion';
-
+import{MatInputModule} from '@angular/material/input'
 
 
 let materialModules = [
@@ -37,7 +37,7 @@ let materialModules = [
   MatSidenavModule,
   MatListModule,
   MatExpansionModule,
-  
+  MatInputModule,
 
   MatFormFieldModule,
   MatCardModule,
