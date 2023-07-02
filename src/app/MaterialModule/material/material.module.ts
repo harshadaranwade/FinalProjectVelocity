@@ -4,8 +4,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
-import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -17,7 +17,10 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatExpansionModule } from '@angular/material/expansion';
-import {MatInputModule}from '@angular/material/input';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
+
+
 let materialModules = [
   MatToolbarModule,
   MatIconModule,
@@ -25,10 +28,11 @@ let materialModules = [
   MatSidenavModule,
   MatListModule,
   MatExpansionModule,
+  MatPaginatorModule,
+
   MatFormFieldModule,
   MatCardModule,
   MatTableModule,
-  MatPaginatorModule,
   MatDialogModule,
   MatSortModule,
   MatProgressSpinnerModule,

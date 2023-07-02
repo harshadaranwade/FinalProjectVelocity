@@ -14,7 +14,7 @@ export class AddCategorylistComponent implements OnInit{
 
   formdata!: FormGroup;
   isUpdate: boolean=false;  
-  categories: string[] = ['Women', 'Men', 'Kids', 'Electronics'];
+  categories: string[] = [];
   selectedId: string|null=null;
   constructor(private router: Router, private http: HttpService, private fb: FormBuilder,private route:ActivatedRoute) 
   {
@@ -23,7 +23,7 @@ export class AddCategorylistComponent implements OnInit{
   ngOnInit() 
   {
     this.createForm();
-
+    this.getParentcategory();
     this.selectedId = this.route.snapshot.queryParamMap.get('id');
     console.log("selected Id", this.selectedId);
 
@@ -65,13 +65,9 @@ export class AddCategorylistComponent implements OnInit{
     savedata() {
       console.log(this.formdata.value);
   
-      // if (this.formdata.valid) {
-      //   const body = this.formdata.value;
-      
         this.http.saveData("subcategory", this.formdata.value).subscribe((res: any) => {
           console.log(res);
-          alert("Category Created Sucessfully");
-          this.router.navigate(['/subcategory']);
+          this.router.navigate(['/categories/sub_category']);
         },
          error => {
           
@@ -86,16 +82,24 @@ export class AddCategorylistComponent implements OnInit{
       console.log(this.selectedId)
       this.http.updateData(endPoint, this.formdata.value).subscribe((resp: any) => {
         // console.log(resp);
-        alert("Category Getting Updated SuccessFully...!");
   
-        this.router.navigate(['/subcategory']);
+        this.router.navigate(['/categories/sub_category']);
       },
         error => {
           console.log("Category not getting updated");
         })
     }
+    getParentcategory(){
+      this.http.getData("category").subscribe((res:any)=>{
+      console.log("get main cateries",res)
+      res.filter((el:any)=>{
+        this.categories.push(el.category)
+        
+      }) 
+       
+      })
   
-  
+    }
     
 
   
@@ -114,6 +118,7 @@ export class AddCategorylistComponent implements OnInit{
   //   this.files.splice(this.files.indexOf(event), 1);
   // }
 
+  }
 
 
-}
+    
