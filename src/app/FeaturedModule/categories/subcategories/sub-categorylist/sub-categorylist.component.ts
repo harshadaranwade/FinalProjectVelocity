@@ -16,11 +16,9 @@ export class SubCategorylistComponent {
   @ViewChild(MatSort) sort!: MatSort;
 
     displayedColumns: any[] = ["category","description","Total_items","CreatedAt","Actions"];
-    // FindIndex!:any;
+  
     dataSource!:MatTableDataSource<any>;
-    // todaysDate = new Date();
 
-    // data:any[]=[];
     constructor(private http:HttpService,private router:Router) {}
   
     ngOnInit()
@@ -34,10 +32,7 @@ export class SubCategorylistComponent {
         this.dataSource = new MatTableDataSource(response);
         // console.log(response);
 
-  //   this.http.getData("products").subscribe((res: any) => 
-  //  {
-  //    this.dataSource = new MatTableDataSource(res);
-  //    // console.log(res);
+  
      console.log("data Fetched sucessfully");
      this.dataSource.paginator = this.paginator;}
       }

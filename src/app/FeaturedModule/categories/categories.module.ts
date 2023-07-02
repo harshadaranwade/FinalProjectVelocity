@@ -12,13 +12,17 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MaterialModule } from 'src/app/MaterialModule/material/material.module';
+import { AddCategorylistComponent } from './subcategories/add-categorylist/add-categorylist.component';
+import { SubCategorylistComponent } from './subcategories/sub-categorylist/sub-categorylist.component';
 
 
 @NgModule({
   declarations: [
     CategoriesComponent,
     AddCategoryComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    AddCategorylistComponent,
+    SubCategorylistComponent
   ],
   imports: [
     CommonModule,

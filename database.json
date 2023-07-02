@@ -163,7 +163,22 @@
       "id": 7
     }
   ],
-  "subcategory":[
-
+  "subcategory": [
+    {
+      "CreatedAt": "2023-07-02T13:46:25.242Z",
+      "category": "jeans",
+      "description": "dcv",
+      "parent_category": "",
+      "image": "",
+      "id": 2
+    },
+    {
+      "CreatedAt": "2023-07-02T14:27:33.876Z",
+      "category": "toys",
+      "description": "dvx",
+      "parent_category": "",
+      "image": "",
+      "id": 3
+    }
   ]
 }

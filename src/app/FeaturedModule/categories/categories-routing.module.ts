@@ -11,7 +11,7 @@ const routes: Routes = [
 {path:'category-list',component:CategoryListComponent},
 {path:'sub_category',component:SubCategorylistComponent},
 {path:'add_subcategory',component:AddCategorylistComponent},
-{ path: '', component: CategoryListComponent },];
+{ path: '', component: CategoryListComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
