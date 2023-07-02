@@ -15,9 +15,10 @@
         </div>
     
         <button type="submit" mat-button id="btn1" >LogIn</button>
-        <button mat-button (click)="openDialog()" id="btn2">SignUp </button>
-        <div *ngIf="showLogInError" class="invalid-feedback d-block" id="error" >* Enter Valid UserName And Password</div>
+       
       </form>
+      <button  mat-button (click)="openDialog()" id="btn2">SignUp </button>
+      <div *ngIf="showLogInError" class="invalid-feedback d-block" id="error" >* Enter Valid UserName And Password</div>
       
     </div>
   </div>
